@@ -1,0 +1,32 @@
+footer
+{
+    padding: 60px 4%;
+}
+
+footer .flex
+{
+    justify-content: space-between;
+}
+
+footer .line_footer
+{
+    padding: 20px 0;
+    border-bottom: 2px solid #00ff08;
+}
+
+footer .down_footer
+{
+    padding: 20px 0;
+}
+
+footer .down_footer p i
+{
+    color: #00ff08;
+    font-size: 22px;
+}
+
+footer .down_footer p a
+{
+    color: #fff;
+    text-decoration: none;
+}

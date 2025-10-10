@@ -1,0 +1,84 @@
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section.main
+{
+    padding: 80px 4%;
+    border: 2px solid #fff;
+}
+
+section.main .flex
+{ 
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    display: flex;
+}
+
+section.main .btn_contato button
+{
+    margin-top: 40px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main .txt_main h1
+{
+    color: #fff;
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.main .txt_main h3
+{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.main .txt_main span
+{
+    color: #00ff08;
+    display: block;
+}
+
+.main .img_main img
+{   
+    /* só é possível utilizazr top, left, rigth, bot se a position ser != de static */
+    position: relative;
+
+    /* chamada para animação
+    1° nome da animation
+    2° sua velocidade, como irá se comportar
+    3° será infinita
+    4° irá do 0 a 100 e 100 a 0 */
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+/* propriedade de animação do CSS */
+@keyframes flutuar
+{
+    0%{
+        top: 0px;
+    }
+
+    100%{
+        top: 30px;
+    }
+
+}
+
+.img_pessoa
+{
+    width: 450px;
+}

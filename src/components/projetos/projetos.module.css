@@ -1,0 +1,74 @@
+section.portfolio
+{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff17;
+
+}
+
+section.portfolio .flex
+{
+    /* gap: 80px; */
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+
+.img-port
+{
+    width: 360px;
+    height: 460px;
+    background-color: #00ff08;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    /* necessário para que o overlay funcione */
+    position: relative;
+}
+
+.img-port:hover
+{
+    background-position: 100% 100%;
+}
+
+.overlay
+{
+    /* neste momento a class overlay so vai trabalhar
+    dentro da class img-port, por causa do position relative e absolute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    border-radius: 40px;
+    display: flex;
+    /* centraliza na vertical */
+    align-items: center;
+    /* centraliza na horizontal */
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.overlay:hover
+{
+    opacity: 100;
+}
+
+.portfolio button
+{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff17;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}

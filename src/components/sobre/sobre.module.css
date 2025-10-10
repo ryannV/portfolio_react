@@ -1,0 +1,69 @@
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section.sobre
+{
+    /* padding: 100px 4%; */
+    padding: 200px;
+    border: 2px solid #fff;
+}
+
+section.sobre .flex
+{
+    align-items: center;
+    gap: 80px;
+    display: flex;
+}
+
+.sobre .img_sobre .img_tag_sobre
+{
+    width: 560px;
+    height: 560px;
+    border-radius: 30px;
+}
+
+.sobre .txt_sobre
+{
+    color: #fff;
+}
+
+.sobre .txt_sobre h2
+{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt_sobre h2 span
+{
+    color: #00ff08;
+    /* o span, é uma propriedade inline level
+    sempre seguirá na mesma linha seu conteúdo,
+    colocando-o em block, ele começa a ser lidado
+    como um bloco, e é levado para linha de baixo */
+    display: block;
+}
+
+.sobre .txt_sobre p
+{
+    margin: 20px 0;
+    /* justifica o texto */
+    text-align: justify;
+}
+
+.btn_social button
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00ff08;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}

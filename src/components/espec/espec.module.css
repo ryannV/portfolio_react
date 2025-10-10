@@ -1,0 +1,68 @@
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section.especialidades
+{
+    padding: 40px 4% 200px 4%;
+    border: 2px solid #fff;
+}
+
+section.especialidades .flex
+{
+    gap: 55px;
+    width: 500px;
+    padding: 40px 0;
+    display: flex;
+}
+
+section.especialidades .container
+{
+    display: flex;
+}
+
+section.especialidades .txt_especialidades
+{
+    color: #fff;
+    padding: 100px ;
+    width: 700px;
+}
+
+.especialidades .especialidades_box
+{
+    color: #fff;
+    padding: 20px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+    background-color: #ffffff48;
+    cursor: pointer;
+}
+
+.especialidades .especialidades_box:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #ffffff65;
+}
+
+
+.especialidades .especialidades_box i
+{
+    font-size: 70px;
+    color: #00ff08;
+}
+
+.especialidades .especialidades_box h3
+{
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.especialidades .txt_descricao
+{
+    padding: 20px 0;
+    text-align: justify;
+}
