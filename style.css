@@ -1,0 +1,443 @@
+/* =============================== ESTILO GERAL =============================== */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: #000;
+}
+
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.btn_contato button
+{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-social button
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00ff08;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+button:hover
+{
+    box-shadow: 0 0 8px #00ff08;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+h2.titulo
+{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span 
+{
+    color: #00ff08;
+}
+
+.icons
+{
+    width: 70px;
+}
+
+::-webkit-scrollbar{
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #00ff08;
+    border-radius: 10px;
+}
+
+/* =============================== ESTILO DO CABECALHO ===============================*/
+
+header
+{
+    /* necessário para deixar afastado do topo e das laterais */
+    padding: 40px 4%;
+}
+
+header > .interface 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a
+{   
+    /* estilizando os links do menu */
+    color: #5d5d5d;
+    text-decoration: none;
+
+    /* o link originalmente é inline-level
+    para ser estilizado com o transform ele 
+    necessitaser inline-block */
+    display: inline-block; 
+    transition: 0.3s;
+}
+
+header a:hover
+{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul
+{   
+    /* tirando as bolinhas das ul's */
+    list-style-type: none;
+}
+
+header nav ul li
+{
+    /* separando os links do menu e configurando para usar transform */
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.imagem-logo
+{
+    width: 100px;
+}
+
+/* =============================== ESTILO TOPO DO SITE ===============================*/
+
+section.topo-do-site
+{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex
+{ 
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+section.topo-do-site .btn_contato button
+{
+    margin-top: 40px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topo-do-site .txt-topo-site h1
+{
+    color: #fff;
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h3
+{
+    color: #fff;
+    margin: 10px 0;
+}
+
+.topo-do-site .txt-topo-site span
+{
+    color: #00ff08;
+    display: block;
+}
+
+.topo-do-site .img-topo-site img
+{   
+    /* só é possível utilizazr top, left, rigth, bot se a position ser != de static */
+    position: relative;
+
+    /* chamada para animação
+    1° nome da animation
+    2° sua velocidade, como irá se comportar
+    3° será infinita
+    4° irá do 0 a 100 e 100 a 0 */
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+/* propriedade de animação do CSS */
+@keyframes flutuar
+{
+    0%{
+        top: 0px;
+    }
+
+    100%{
+        top: 30px;
+    }
+
+}
+
+.img-pessoa
+{
+    width: 450px;
+}
+
+/*  ESTILO DAS ESPECIALIDADES */
+
+section.especialidades
+{
+    padding: 40px 4% 200px 4%;
+}
+
+section.especialidades .flex
+{
+    gap: 55px;
+    width: 500px;
+    padding: 40px 0;
+    /* justify-content: space-between; */
+    /* border: 4px solid #fff; */
+}
+
+section.especialidades .container
+{
+    display: flex;
+    /* border: 4px solid #fff; */
+}
+
+section.especialidades .txt-especialidades
+{
+    color: #fff;
+    padding: 100px ;
+    /* border: 4px solid #fff; */
+    width: 700px;
+}
+
+.especialidades .especialidades-box
+{
+    color: #fff;
+    padding: 20px;
+    /* border: 2px solid #fff; */
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+    background-color: #ffffff48;
+    cursor: pointer;
+}
+
+.especialidades .especialidades-box:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #ffffff65;
+}
+
+
+.especialidades .especialidades-box i
+{
+    font-size: 70px;
+    color: #00ff08;
+}
+
+.especialidades .especialidades-box h3
+{
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.especialidades .txt-descricao
+{
+    padding: 20px 0;
+    text-align: justify;
+}
+
+/* ESTILO DO SOBRE */
+
+section.sobre
+{
+    padding: 100px 4%;
+}
+
+section.sobre .flex
+{
+    align-items: center;
+    gap: 80px;
+}
+
+.sobre .img-sobre .img-tag-sobre
+{
+    width: 560px;
+    height: 560px;
+    border-radius: 30px;
+}
+
+.sobre .txt-sobre
+{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2
+{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span
+{
+    color: #00ff08;
+    /* o span, é uma propriedade inline level
+    sempre seguirá na mesma linha seu conteúdo,
+    colocando-o em block, ele começa a ser lidado
+    como um bloco, e é levado para linha de baixo */
+    display: block;
+}
+
+.sobre .txt-sobre p
+{
+    margin: 20px 0;
+    /* justifica o texto */
+    text-align: justify;
+}
+
+/* ESTILO DO PORTFÓLIO */
+
+section.portfolio
+{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff17;
+
+}
+
+section.portfolio .flex
+{
+    /* gap: 80px; */
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+
+.img-port
+{
+    width: 360px;
+    height: 460px;
+    background-color: #00ff08;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    /* necessário para que o overlay funcione */
+    position: relative;
+}
+
+.img-port:hover
+{
+    background-position: 100% 100%;
+}
+
+.overlay
+{
+    /* neste momento a class overlay so vai trabalhar
+    dentro da class img-port, por causa do position relative e absolute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a1;
+    border-radius: 40px;
+    display: flex;
+    /* centraliza na vertical */
+    align-items: center;
+    /* centraliza na horizontal */
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.overlay:hover
+{
+    opacity: 100;
+}
+
+.portfolio button
+{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff17;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+
+/* ESTILO DO RODAPÉ */
+footer
+{
+    padding: 60px 4%;
+}
+
+footer .flex
+{
+    justify-content: space-between;
+}
+
+footer .line-footer
+{
+    padding: 20px 0;
+    border-bottom: 2px solid #00ff08;
+}
+
+footer .down-footer
+{
+    padding: 20px 0;
+}
+
+footer .down-footer p i
+{
+    color: #00ff08;
+    font-size: 22px;
+}
+
+footer .down-footer p a
+{
+    color: #fff;
+    text-decoration: none;
+}

@@ -10,7 +10,7 @@ const projetos = () => {
 
             <div className={styles.flex}>
                 <div className={styles.img_port} 
-                    // style="background-image: url(images/projeto\ 01\ -\ landing\ page.png);"
+                    style={{backgroundImage: `url('../../assets/images/projeto 01 - landing page.png)`}}
                 >
                     <div className={styles.overlay}>Landing Page - Newsletter</div>
                 </div>

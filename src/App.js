@@ -15,7 +15,7 @@ function App() {
       <Main/>
       <Sobre/>
       <Espec/>
-      {/* <Projetos/> */}
+      <Projetos/>
       {/* <Footer/> */}
     </div>
   );  
