@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './main.module.css';
 
-import Ryann from '../../assets/images/ryann11.png'
+import Ryann from '../../assets/images/RV.jpg'
 
 const main = () => {
   return (
@@ -9,21 +9,27 @@ const main = () => {
         <div className={styles.interface}>
 
             <div className={styles.flex}>
+                <div className={styles.perfil_container}>
+                    <img className={styles.perfil_img} src={Ryann} alt="pessoa"/>
+                    <div className={styles.status_online}></div>
+                </div>
+
                 <div className={styles.txt_main}>
-                    <h1>OLÁ, BEM-VINDOS<span>EM MEU PORTFÓLIO.</span></h1>
-                    <h3>Desenvolvedor Front-End</h3>
+                    <h1>Ryann Victor</h1>
+                    <h3>Bem-Vindos ao meu portfolio! </h3>
+                    <h4>Aqui você verá minhas experiências, projetos e habilidades.</h4>
 
                     <div className={styles.btn_contato}>
-                        <a href="https://www.linkedin.com/in/ryann-victor-939b97240/"><button>LinkedIn</button></a>
-                        <a href="https://github.com/ryannV"><button>GitHub</button></a>
+                        <a href=""><button>Download CV</button></a>
+                        {/* <a href=""><button>GitHub</button></a> */}
                     </div>
-
                 </div>
 
-                <div className={styles.img_main}>
-                    <img class="img_pessoa" src={Ryann} alt="pessoa"/>
+                <div className={styles.btn_social}>
+                    <a href="https://www.instagram.com/ryannvicttor/"><button><i class="bi bi-instagram" style={{ color: '#fff'}}></i></button></a>
+                    <a href="https://www.linkedin.com/in/ryann-victor-939b97240/"><button><i class="bi bi-linkedin" style={{ color: '#fff'}}></i></button></a>
+                    <a href="https://github.com/ryannV"><button><i class="bi bi-github" style={{ color: '#fff'}}></i></button></a>
                 </div>
-                
             </div>
         </div>
     </section>

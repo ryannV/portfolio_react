@@ -1,0 +1,76 @@
+.ferramentas{
+    background-color: #111827;
+    padding: 60px 0 60px 0;
+}
+
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2.titulo
+{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.descricao
+{
+    padding-top: 20px;
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 200;
+    text-align: center;
+}
+
+.grids
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.grids_cards
+{
+    width: 180px;
+    height: 130px;
+    background-color: #25272c;
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-direction: column;
+    border-radius: 20px 20px 0  0;
+    border-bottom: 4px solid rgba(217,42,42,1);
+}
+
+.grids_cards:hover
+{   
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.img_tech
+{
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    /* filter: brightness(200%) invert(100%);  */
+    filter: brightness(0) invert(1);
+}
+
+.grids div p{
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 200;
+    text-align: center;
+}

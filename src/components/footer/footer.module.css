@@ -1,32 +1,90 @@
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 25px;
+    background-image: linear-gradient( 
+        90.1deg, 
+        rgba(122,0,0,1) 8.1%, 
+        rgba(217,42,42,1) 74.4% 
+    );
+    
+    -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover{
+    /* transform: scale(1.05);
+    transition: 0.3s; */
+    transform: rotate(8deg); 
+}
+
 footer
 {
     padding: 60px 4%;
 }
 
-footer .flex
+.flex
 {
     justify-content: space-between;
+    display: flex;
 }
 
-footer .line_footer
+.line_footer
 {
     padding: 20px 0;
-    border-bottom: 2px solid #00ff08;
+    border-bottom: 2px solid #363941;
 }
 
-footer .down_footer
+.down_footer
 {
     padding: 20px 0;
 }
 
-footer .down_footer p i
+.down_footer p i
 {
-    color: #00ff08;
+    color: rgba(217,42,42,1);
     font-size: 22px;
+    margin: 0 5px 0 5px;
 }
 
-footer .down_footer p a
+.down_footer p a
 {
     color: #fff;
     text-decoration: none;
+}
+
+.imagem_logo
+{
+    width: 100px;
+}
+
+.btn_social button
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f2937;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.copy{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 200;
 }

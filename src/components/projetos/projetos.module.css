@@ -1,23 +1,47 @@
-section.portfolio
+.projetos
 {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff17;
+    user-select: none;
 
 }
 
-section.portfolio .flex
+.interface
+{   
+    /* usado para definir um quadrante longe das bordas */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.titulo
 {
-    /* gap: 80px; */
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+.titulo span 
+{
+    background-image: linear-gradient( 
+    90.1deg, 
+    rgba(122,0,0,1) 8.1%, 
+    rgba(217,42,42,1) 74.4% 
+    );
+    background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+}
+
+.flex
+{
     justify-content: space-around;
     margin-top: 40px;
+    display: flex;
 }
 
-
-.img-port
+.img_port
 {
-    width: 360px;
+    width: 280px;
     height: 460px;
-    background-color: #00ff08;
     background-size: cover;
     background-position: 100% 0%;
     transition: 5s;
@@ -27,7 +51,7 @@ section.portfolio .flex
     position: relative;
 }
 
-.img-port:hover
+.img_port:hover
 {
     background-position: 100% 100%;
 }
@@ -60,15 +84,28 @@ section.portfolio .flex
     opacity: 100;
 }
 
-.portfolio button
+.projetos button
 {
-    padding: 10px 40px;
+    padding: 10px 20px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #ffffff17;
+    background-color: #9b0c0c;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: 0.3s;
     color: #fff;
+    /* background-image: linear-gradient( 
+    90.1deg, 
+    rgba(122,0,0,1) 8.1%, 
+    rgba(217,42,42,1) 74.4% 
+    ); */
+}
+
+.gap{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
 }

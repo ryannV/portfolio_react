@@ -1,84 +1,146 @@
 .interface
 {   
     /* usado para definir um quadrante longe das bordas */
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-section.main
+.main
 {
-    padding: 80px 4%;
-    border: 2px solid #fff;
+    padding: 155px 0 155px 0;
+    user-select: none;
 }
 
-section.main .flex
+.main .flex
 { 
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    display: flex;
+    text-align: center;
 }
 
-section.main .btn_contato button
+.txt_main h1
+{
+    font-weight: 500;
+    font-size: 5em;
+    background-image: linear-gradient( 
+        90.1deg, 
+        rgba(122,0,0,1) 8.1%, 
+        rgba(217,42,42,1) 74.4% 
+    );
+    
+    /* A propriedade crucial: recorta o fundo para que ele apareça apenas onde há texto */
+    -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    background-clip: text;
+    
+    /* Torna o texto transparente para que o fundo (gradiente) seja visível */
+    color: transparent;
+    
+    /* Para garantir que o gradiente não se repita caso o texto seja muito longo */
+    background-repeat: no-repeat;
+}
+
+.txt_main h3
+{
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.txt_main h4
+{
+    color: #fff;
+    margin: 10px 0;
+    font-weight: 200;
+}
+
+.perfil_container
+{   
+    position: relative;
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    /* overflow: hidden; */
+    display: inline-block; /* Para que o container se ajuste ao conteúdo */
+    background-image: linear-gradient(to right, rgba(122,0,0,1) 8.1%, rgba(217,42,42,1) 74.4%); /* Exemplo de gradiente */
+    padding: 3px;
+    box-sizing: border-box;
+
+}
+
+.perfil_img
+{   
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border-radius: 50%;
+    border: 3px solid #20232A;
+    box-sizing: border-box;
+}
+
+.status_online {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #4CAF50;
+    border-radius: 50%; 
+    border: 3px solid #20232A; 
+    transform: translate(25%, 25%); /* Ajusta a posição para que metade do ponto fique para fora */
+    animation: pulsar 1.5s infinite ease-out;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: translate(25%, 25%) scale(1); /* Posição normal, escala 100% */
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); /* Sombra inicial transparente */
+    }
+    70% {
+        transform: translate(25%, 25%) scale(1.1); /* Escala ligeiramente maior */
+        box-shadow: 0 0 0 1px rgba(76, 175, 80, 0); /* Sombra se expande e fica transparente */
+    }
+    100% {
+        transform: translate(25%, 25%) scale(1); /* Volta à escala normal */
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); /* Sombra desaparece */
+    }
+}
+
+.btn_contato
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn_contato button
 {
     margin-top: 40px;
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #00ff08;
+    background-color: #9b0c0c;
     border: 0;
-    border-radius: 30px;
+    border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.main .txt_main h1
+.btn_social
 {
+    
+    text-align: center;
+    margin-top: 40px;
+}
+.btn_social button
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1f2937;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 15px;
+    transition: 0.2s;
+}
+
+.icon_white{
     color: #fff;
-    font-size: 38px;
-    line-height: 40px;
-}
-
-.main .txt_main h3
-{
-    color: #fff;
-    margin: 10px 0;
-}
-
-.main .txt_main span
-{
-    color: #00ff08;
-    display: block;
-}
-
-.main .img_main img
-{   
-    /* só é possível utilizazr top, left, rigth, bot se a position ser != de static */
-    position: relative;
-
-    /* chamada para animação
-    1° nome da animation
-    2° sua velocidade, como irá se comportar
-    3° será infinita
-    4° irá do 0 a 100 e 100 a 0 */
-    animation: flutuar 2s ease-in-out infinite alternate;
-
-}
-
-/* propriedade de animação do CSS */
-@keyframes flutuar
-{
-    0%{
-        top: 0px;
-    }
-
-    100%{
-        top: 30px;
-    }
-
-}
-
-.img_pessoa
-{
-    width: 450px;
 }

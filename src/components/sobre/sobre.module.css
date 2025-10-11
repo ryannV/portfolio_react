@@ -1,60 +1,192 @@
+.sobre
+{
+    padding: 100px;
+    user-select: none;
+}
+
 .interface
 {   
     /* usado para definir um quadrante longe das bordas */
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-section.sobre
-{
-    /* padding: 100px 4%; */
-    padding: 200px;
-    border: 2px solid #fff;
-}
-
-section.sobre .flex
-{
-    align-items: center;
-    gap: 80px;
+.flex
+{ 
     display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #242e3d;
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.sobre .img_sobre .img_tag_sobre
+.img_tag_sobre
 {
-    width: 560px;
-    height: 560px;
+    width: 250px;
+    height: 250 px;
     border-radius: 30px;
+    /* overflow: hidden; */
+    display: inline-block; /* Para que o container se ajuste ao conteúdo */
+    background-image: linear-gradient(to right, rgba(122,0,0,1) 8.1%, rgba(217,42,42,1) 74.4%); /* Exemplo de gradiente */
+    padding: 3px;
+    box-sizing: border-box;
 }
 
-.sobre .txt_sobre
-{
-    color: #fff;
-}
-
-.sobre .txt_sobre h2
+.sobre h2
 {
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
 }
 
-.sobre .txt_sobre h2 span
+.sobre h2 span
 {
-    color: #00ff08;
-    /* o span, é uma propriedade inline level
-    sempre seguirá na mesma linha seu conteúdo,
-    colocando-o em block, ele começa a ser lidado
-    como um bloco, e é levado para linha de baixo */
-    display: block;
+    background-image: linear-gradient( 
+        90.1deg, 
+        rgba(122,0,0,1) 8.1%, 
+        rgba(217,42,42,1) 74.4% 
+    );
+    background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
 }
 
-.sobre .txt_sobre p
+.destaque
 {
-    margin: 20px 0;
-    /* justifica o texto */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.descricao
+{
+    color: #fff;
     text-align: justify;
 }
 
+.descricao span
+{
+    color: rgba(217,42,42,1);
+}
+
+.loc
+{
+    color: #fff;
+    margin-top: 20px;
+}
+
+.grid_skills
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.grid_cards
+{
+    background-color: #242e3d;
+    border-radius: 20px;
+    margin: 20px;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border: 1px solid #3f4753;
+}
+
+.grid_cards h4
+{
+    text-align: center;
+    color: #fff;
+    margin: 20px 0 20px 0;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.grid_cards p
+{
+    text-align: center;
+}
+
+.grid_cards span
+{
+    font-size: 0.9em;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: rgb(65, 19, 19);
+    border-radius: 20px;
+    color: rgb(230, 183, 183);
+    display: inline-block;
+}
+
+.grid_exp
+{
+    background-color: #242e3d;
+    border-radius: 20px;
+    margin: 50px 0 50px 0;
+    box-sizing: border-box;
+    border: 1px solid #3f4753;
+    padding: 20px;
+
+}
+
+.grid_exp h4
+{
+    color: #fff;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.grid_exp p
+{
+    color: #d7dff0;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 2;
+}
+
+.sub_title
+{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.grid
+{
+    margin-top: 50px;
+}
+
+.info_exp
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info_exp h5
+{
+    color: rgba(217,42,42,1);
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.info_exp p
+{
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* .btn_social
+{
+    
+    text-align: center;
+}
 .btn_social button
 {
     width: 60px;
@@ -66,4 +198,4 @@ section.sobre .flex
     cursor: pointer;
     margin: 0 5px;
     transition: 0.2s;
-}
+} */
