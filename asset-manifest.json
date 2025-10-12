@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_react/static/css/main.cb789fda.css",
-    "main.js": "/portfolio_react/static/js/main.657c978b.js",
+    "main.js": "/portfolio_react/static/js/main.6a3c8cf8.js",
     "static/js/453.748ac76e.chunk.js": "/portfolio_react/static/js/453.748ac76e.chunk.js",
     "static/media/projeto02-supermario.png": "/portfolio_react/static/media/projeto02-supermario.82b7b4242b59a69aa08e.png",
     "static/media/projeto01-landingpage.png": "/portfolio_react/static/media/projeto01-landingpage.8b8b53d1ef46d3706825.png",
@@ -9,6 +9,7 @@
     "static/media/RV.jpg": "/portfolio_react/static/media/RV.a114fa5e082977e9cbce.jpg",
     "static/media/DigiVPN.png": "/portfolio_react/static/media/DigiVPN.8ed8d54fdb37f8792da3.png",
     "static/media/RV_Terno.jpg": "/portfolio_react/static/media/RV_Terno.8954cfefe75f50251e07.jpg",
+    "static/media/DigiFirebird.png": "/portfolio_react/static/media/DigiFirebird.a3479614d96231c7d9ba.png",
     "static/media/appscript.png": "/portfolio_react/static/media/appscript.b907df5a985f67648edb.png",
     "static/media/mysql.png": "/portfolio_react/static/media/mysql.48faf36579a368914213.png",
     "static/media/html.png": "/portfolio_react/static/media/html.31497a13d5b51cea9b7d.png",
@@ -27,11 +28,11 @@
     "static/media/git.svg": "/portfolio_react/static/media/git.8ecdc3c556e1278611a7cfbb49c857a2.svg",
     "static/media/css3.svg": "/portfolio_react/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
     "main.cb789fda.css.map": "/portfolio_react/static/css/main.cb789fda.css.map",
-    "main.657c978b.js.map": "/portfolio_react/static/js/main.657c978b.js.map",
+    "main.6a3c8cf8.js.map": "/portfolio_react/static/js/main.6a3c8cf8.js.map",
     "453.748ac76e.chunk.js.map": "/portfolio_react/static/js/453.748ac76e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb789fda.css",
-    "static/js/main.657c978b.js"
+    "static/js/main.6a3c8cf8.js"
   ]
 }
