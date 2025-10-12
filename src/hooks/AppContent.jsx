@@ -1,4 +1,5 @@
 import { useLocation, Routes, Route } from 'react-router-dom';
+import { useScrollToHash } from './useScrollToHash.jsx';
 
 import NavBar from '../components/navBar/navBar.jsx';
 import Main from '../components/main/main.jsx';
@@ -10,6 +11,8 @@ import Footer from '../components/footer/footer.jsx';
 function AppContent() {
     const location = useLocation(); 
     const isHomePage = location.pathname === '/'; 
+
+    useScrollToHash();
 
     return (
         <>

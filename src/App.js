@@ -1,14 +1,17 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
+
+// Usando HashRouter para deploy em GitHub Pages
+import { HashRouter } from 'react-router-dom';
 
 import AppContent from './hooks/AppContent.jsx'; 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <AppContent /> 
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );  
 }

@@ -1,6 +1,8 @@
 import styles from './navBar.module.css'
 import '../../App.css';
 
+import { NavLink } from 'react-router-dom';
+
 const navBar = () => {
   return (
     <header>
@@ -11,10 +13,10 @@ const navBar = () => {
 
             <nav>
                 <ul>
-                    <li><a href='/'>Início </a></li>
-                    <li><a href='/sobre'>Sobre </a></li>
-                    <li><a href='/ferramentas'>Ferramentas</a></li>
-                    <li><a href='/projetos'>Projetos</a></li>
+                    <li><NavLink to=''>Inicio</NavLink></li>
+                    <li><NavLink to='/sobre'>Sobre</NavLink></li>
+                    <li><NavLink to='/#ferramentas'>Ferramentas</NavLink></li>
+                    <li><NavLink to='/projetos'>Projetos</NavLink></li>
                 </ul>
             </nav>
 

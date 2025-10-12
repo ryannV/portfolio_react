@@ -21,7 +21,6 @@ const main = () => {
 
                     <div className={styles.btn_contato}>
                         <a href=""><button>Download CV</button></a>
-                        {/* <a href=""><button>GitHub</button></a> */}
                     </div>
                 </div>
 

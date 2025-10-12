@@ -19,49 +19,9 @@ import Firebird from '../../assets/icons/firebird.svg'
 import GitHub from '../../assets/icons/github.svg'
 
 const Ferramentas = () => {
-    
-    const [desc, setDesc] = useState([
-        // HTML
-        "Base das minhas aplicações web. Utilizo há 4 anos em projetos acadêmicos, pessoais e corporativos, criando estruturas sólidas e acessíveis integradas a React e Node.js.",
-
-        // CSS
-        "Responsável por dar vida e estilo ao código. Há 4 anos utilizo CSS para criar interfaces modernas, responsivas e funcionais em projetos web e internos da empresa.",
-
-        // JS
-        "Motor da interatividade nas minhas aplicações. Com 4 anos de experiência, utilizo JS tanto para automação de processos quanto no desenvolvimento web com React e Node.js.",
-
-        // JAVA
-        "Uma base sólida em programação orientada a objetos. Trabalho com Java há 4 anos em projetos acadêmicos e há mais de 1 ano em um sistema real para uma transportadora, aplicando boas práticas e arquiteturas de software. 🚛💻",
-
-        // MYSQL
-        "Utilizo MySQL há 4 anos, tanto em projetos acadêmicos quanto no meu projeto extensionista para uma transportadora. Tenho experiência em modelagem de banco de dados, consultas complexas (queries) e gerenciamento de dados utilizando o MySQL Workbench.",
-
-        // ORACLE
-        "Experiência prática com Oracle Database em estágio há 1 ano, realizando consultas (queries) para extração de dados e criação de relatórios para projetos e dashboards no Power BI.",
-
-        // POWERBI
-        "Atuei na criação de dashboards no Power BI, contribuindo com um time de analistas para gerar insights que apoiam decisões estratégicas. Desenvolvi relatórios voltados para redução de custos, rastreabilidade e identificação de pontos críticos na produção industrial.",
-
-        // GIT
-        "Sou certificado pelo curso de Versionamento de Código com Git e GitHub pela Dio. Tenho experiência em controle de versões e colaboração em projetos pessoais, com conhecimento em boas práticas de versionamento.",
-
-        // APPSCRIPT
-        "Utilizei AppScript, linguagem baseada em JavaScript, para automatizar e otimizar planilhas do Google Sheets. Desenvolvi scripts que melhoraram em 50% o tempo de processos manuais, incluindo manutenção de códigos, criação de novas funções e processos ETL, otimizando o trabalho diário da equipe."
-    
-    ]);
-
-    const [actived, setActived] = useState(false);
-
-    const showMessage = (id) =>{
-        if (actived === id){
-            setActived(null);
-        } else {
-            setActived(id);
-        }
-    }
 
   return (
-    <section className={styles.ferramentas}>
+    <section id="ferramentas" className={styles.ferramentas}>
         <div className={styles.interface}>
 
             <h2 className={styles.titulo}>Ferramentas & Tecnologias</h2>
