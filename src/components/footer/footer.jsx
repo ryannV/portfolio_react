@@ -1,6 +1,8 @@
-import styles from './footer.module.css'
+import styles from './Footer.module.css'
 
-const footer = () => {
+import { NavLink } from 'react-router-dom';
+
+const Footer = () => {
   return (
     <footer>
             <div className={styles.interface}>
@@ -8,7 +10,7 @@ const footer = () => {
                 <div className={styles.line_footer}>
                     <div className={styles.flex}>
                         <div>
-                            <h1 className={styles.logo}>&lt;RV/&gt;</h1>
+                            <h1><NavLink to='' className={styles.logo}>&lt;RV/&gt;</NavLink></h1>
                         </div>
 
                         <div className={styles.btn_social}>
@@ -24,17 +26,19 @@ const footer = () => {
                         </div>
                     </div>
                 </div>
-
+                
                 <div className={styles.down_footer}>
-                    {/* <p>
+                    <p>
                         <i class="bi bi-envelope-fill"></i> 
                         <a href="mailto:ryannvictor72@gmail.com">ryannvictor72@gmail.com</a>
                     </p>
+
                     <p>
                         <i class="bi bi-phone"></i> 
                         <a href="https://wa.me/5533999277685?text=Ol%C3%A1%21+Estou+aqui+pelo+seu+portf%C3%B3lio.+%F0%9F%9A%80%F0%9F%98%80">(33) 9 9927-7685</a>
-                    </p> */}
+                    </p>
                 </div>
+                
 
                 <h4 className={styles.copy}>&copy; 2025 Todos os direitos reservados. <span>Feito por Ryann Victor Vieira Miranda</span></h4>
 
@@ -43,4 +47,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer;

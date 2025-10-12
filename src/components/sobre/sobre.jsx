@@ -1,8 +1,8 @@
-import styles from './sobre.module.css'
+import styles from './Sobre.module.css'
 
-import Ryann from '../../assets/images/RV_Terno.jpg' 
+import Ryann from '../../assets/images/RV_rosto.jpg' 
 
-const sobre = () => {
+const Sobre = () => {
   return (
     <section className={styles.sobre}>
         <div className={styles.interface}>
@@ -22,8 +22,9 @@ const sobre = () => {
                         Tenho experiência com <span>SQL, bancos de dados relacional e Power BI</span>, tendo desenvolvido 
                         dashboards para apoio à tomada de decisão, como redução de centros de custo e identificação de pontos críticos em processos 
                         industriais.
+                        <br />
                     </p>
-
+                        <br />
                     <p className={styles.descricao}>
                         Atualmente, venho me aprofundando no <span>desenvolvimento web com React e Node.js</span>, criando soluções que otimizam o dia a dia 
                         de analistas, centralizando arquivos e informações internas da empresa.
@@ -34,7 +35,7 @@ const sobre = () => {
             </div>
 
             {/* Hards Skills */}
-            <h2 className={styles.sub_title}>Hards Skills</h2>
+            <h2 className={styles.sub_title}>Hard Skills</h2>
 
             <div className={styles.grid_skills}>
 
@@ -60,6 +61,56 @@ const sobre = () => {
                 <div className={styles.grid_cards}>
                     <h4>&lt;/&gt; DataBase</h4>
                     <p><span>Firebird</span><span>MySQL</span><span>Oracle</span></p>
+                </div>
+
+            </div>
+
+            {/* Soft Skills */}
+            <h2 className={styles.sub_title}>Soft Skills</h2>
+
+            <div className={styles.grid_skills}>
+
+                <div className={styles.grid_cards}>
+                    <h4>🤝 Comunicação & Colaboração</h4>
+                    <p>
+                        <span>Trabalho em equipe</span>
+                        <span>Comunicação clara</span>
+                        <span>Empatia</span>
+                        <span>Escuta ativa</span>
+                    </p>
+                </div>
+
+                <div className={styles.grid_cards}>
+                    <h4>🚀 Proatividade & Responsabilidade</h4>
+                    <p>
+                        <span>Autonomia</span>
+                        <span>Comprometimento</span>
+                        <span>Gestão do tempo</span>
+                        <span>Proatividade</span>
+                    </p>
+                </div>
+
+                </div>
+
+                <div className={styles.grid_skills}>
+
+                <div className={styles.grid_cards}>
+                    <h4>🧠 Pensamento Analítico</h4>
+                    <p>
+                        <span>Resolução de problemas</span>
+                        <span>Pensamento lógico</span>
+                        <span>Aprendizado contínuo</span>
+                        <span>Curiosidade técnica</span>
+                    </p>
+                </div>
+
+                <div className={styles.grid_cards}>
+                    <h4>💡 Criatividade & Inovação</h4>
+                    <p>
+                        <span>Inovação</span>
+                        <span>Flexibilidade</span>
+                        <span>Resiliência</span>
+                    </p>
                 </div>
 
             </div>
@@ -142,4 +193,4 @@ const sobre = () => {
   )
 }
 
-export default sobre
+export default Sobre;

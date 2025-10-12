@@ -5,9 +5,10 @@
     margin: 0 auto;
 }
 
-.logo{
+.logo
+{
     font-weight: 700;
-    font-size: 25px;
+    font-size: 1em;
     background-image: linear-gradient( 
         90.1deg, 
         rgba(122,0,0,1) 8.1%, 
@@ -22,9 +23,8 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.logo:hover{
-    /* transform: scale(1.05);
-    transition: 0.3s; */
+.logo:hover
+{
     transform: rotate(8deg); 
 }
 

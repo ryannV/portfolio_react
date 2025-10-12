@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import styles from './ferramentas.module.css'
+import styles from './Ferramentas.module.css';
 
-import HTML5 from '../../assets/icons/html.png'
-import CSS3 from '../../assets/icons/css3.svg'
-import JS from '../../assets/icons/javascript.svg'
-import Java from '../../assets/icons/java.png'
-import Appscript from '../../assets/icons/appscript.png'
-import Git from '../../assets/icons/git.svg'
-import MySQL from '../../assets/icons/mysql.png'
-import Oracle from '../../assets/icons/database.svg'
-import PowerBI from '../../assets/icons/powerbi.svg'
-import ReactIcon from '../../assets/icons/react.svg'
-import NodeJS from '../../assets/icons/node.svg'
-import Figma from '../../assets/icons/figma.svg'
-import Bootstrap from '../../assets/icons/bootstrap.svg'
-import Csharp from '../../assets/icons/csharp.png'
-import Firebird from '../../assets/icons/firebird.svg'
-import GitHub from '../../assets/icons/github.svg'
+import HTML5 from '../../assets/icons/html.png';
+import CSS3 from '../../assets/icons/css3.svg';
+import JS from '../../assets/icons/javascript.svg';
+import Java from '../../assets/icons/java.png';
+import Appscript from '../../assets/icons/appscript.png';
+import Git from '../../assets/icons/git.svg';
+import MySQL from '../../assets/icons/mysql.png';
+import Oracle from '../../assets/icons/database.svg';
+import PowerBI from '../../assets/icons/powerbi.svg';
+import ReactIcon from '../../assets/icons/react.svg';
+import NodeJS from '../../assets/icons/node.svg';
+import Figma from '../../assets/icons/figma.svg';
+import Bootstrap from '../../assets/icons/bootstrap.svg';
+import Csharp from '../../assets/icons/csharp.png';
+import Firebird from '../../assets/icons/firebird.svg';
+import GitHub from '../../assets/icons/github.svg';
 
 const Ferramentas = () => {
 

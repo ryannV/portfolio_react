@@ -1,9 +1,17 @@
-import React from 'react';
-import styles from './main.module.css';
+import styles from './Main.module.css';
 
 import Ryann from '../../assets/images/RV.jpg'
 
-const main = () => {
+const Main = () => {
+    const downloadCurriculo = () => {
+        const link = document.createElement("a");
+        link.href = "https://drive.google.com/uc?export=download&id=18NHONNjg6Y1OHsQm4juN7t3SPbc_vAVp";
+        link.download = "CV Ryann Victor.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
   return (
     <section className={styles.main}>
         <div className={styles.interface}>
@@ -20,7 +28,7 @@ const main = () => {
                     <h4>Aqui você verá minhas experiências, projetos e habilidades.</h4>
 
                     <div className={styles.btn_contato}>
-                        <a href=""><button>Download CV</button></a>
+                        <button onClick={downloadCurriculo}>Download CV</button>
                     </div>
                 </div>
 
@@ -35,4 +43,4 @@ const main = () => {
   )
 }
 
-export default main
+export default Main;

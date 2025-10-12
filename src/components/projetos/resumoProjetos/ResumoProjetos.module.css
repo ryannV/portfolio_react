@@ -1,0 +1,46 @@
+.resumo_container {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 28px;
+  margin: 24px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+.resumo_container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.resumo_titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.resumo_descricao {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.resumo_descricao p {
+  margin-bottom: 14px;
+}
+
+.resumo_descricao strong {
+  color: #1d4ed8; /* Azul profissional e agradável */
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  background-color: #f9f9f9;
+  border: 1px dashed #ddd;
+}

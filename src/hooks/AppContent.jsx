@@ -1,12 +1,12 @@
 import { useLocation, Routes, Route } from 'react-router-dom';
 import { useScrollToHash } from './useScrollToHash.jsx';
 
-import NavBar from '../components/navBar/navBar.jsx';
-import Main from '../components/main/main.jsx';
-import Sobre from '../components/sobre/sobre.jsx';
-import Ferramentas from '../components/ferramentas/ferramentas.jsx';
-import Projetos from '../components/projetos/projetos.jsx';
-import Footer from '../components/footer/footer.jsx';
+import NavBar from '../components/navBar/NavBar.jsx';
+import Main from '../components/main/Main.jsx';
+import Sobre from '../components/sobre/Sobre.jsx';
+import Ferramentas from '../components/ferramentas/Ferramentas.jsx';
+import Projetos from '../components/projetos/Projetos.jsx';
+import Footer from '../components/footer/Footer.jsx';
 
 function AppContent() {
     const location = useLocation(); 

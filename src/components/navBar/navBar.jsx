@@ -1,14 +1,14 @@
-import styles from './navBar.module.css'
+import styles from './NavBar.module.css'
 import '../../App.css';
 
 import { NavLink } from 'react-router-dom';
 
-const navBar = () => {
+const NavBar = () => {
   return (
     <header>
         <div className={styles.interface}>
-            <div className={styles.logo}>
-              <h1 className={styles.logo}>&lt;RV/&gt;</h1>
+            <div>
+              <h1><NavLink to='' className={styles.logo}>&lt;RV/&gt;</NavLink></h1>
             </div>
 
             <nav>
@@ -28,4 +28,4 @@ const navBar = () => {
   )
 }
 
-export default navBar;
+export default NavBar;
