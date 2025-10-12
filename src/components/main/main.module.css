@@ -121,6 +121,13 @@
     border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
+    color: #fff;
+}
+
+.btn_contato button:hover
+{
+    background-color: #b11212;
+    transform: scale(1.02);
 }
 
 .btn_social
@@ -129,17 +136,24 @@
     text-align: center;
     margin-top: 40px;
 }
+
 .btn_social button
 {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: none;
-    background-color: #1f2937;
+    background-color: #2f3a4b;
     font-size: 25px;
     cursor: pointer;
     margin: 0 15px;
     transition: 0.2s;
+}
+
+.btn_social button:hover
+{
+    background-color: #9b0c0c;
+    transform: scale(1.1);
 }
 
 .icon_white{

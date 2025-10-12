@@ -102,10 +102,16 @@
     ); */
 }
 
-.gap{
+.gap
+{
     display: flex;
     justify-content: center;
     gap: 10px;
     text-align: center;
     width: 100%;
+}
+
+.grid
+{
+    margin: 60px 0 100px 0;
 }

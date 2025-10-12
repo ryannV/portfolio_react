@@ -1,7 +1,5 @@
 import styles from './footer.module.css'
 
-import LogoRV from '../../assets/images/LOGORV.png'
-
 const footer = () => {
   return (
     <footer>
