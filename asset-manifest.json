@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_react/static/css/main.ab7eb0ac.css",
-    "main.js": "/portfolio_react/static/js/main.6bb47ec4.js",
+    "main.js": "/portfolio_react/static/js/main.1c53b803.js",
     "static/js/453.748ac76e.chunk.js": "/portfolio_react/static/js/453.748ac76e.chunk.js",
     "static/media/projeto02-supermario.png": "/portfolio_react/static/media/projeto02-supermario.82b7b4242b59a69aa08e.png",
     "static/media/projeto01-landingpage.png": "/portfolio_react/static/media/projeto01-landingpage.8b8b53d1ef46d3706825.png",
@@ -27,11 +27,11 @@
     "static/media/git.svg": "/portfolio_react/static/media/git.8ecdc3c556e1278611a7cfbb49c857a2.svg",
     "static/media/css3.svg": "/portfolio_react/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
     "main.ab7eb0ac.css.map": "/portfolio_react/static/css/main.ab7eb0ac.css.map",
-    "main.6bb47ec4.js.map": "/portfolio_react/static/js/main.6bb47ec4.js.map",
+    "main.1c53b803.js.map": "/portfolio_react/static/js/main.1c53b803.js.map",
     "453.748ac76e.chunk.js.map": "/portfolio_react/static/js/453.748ac76e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab7eb0ac.css",
-    "static/js/main.6bb47ec4.js"
+    "static/js/main.1c53b803.js"
   ]
 }
