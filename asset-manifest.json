@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab7eb0ac.css",
+    "main.js": "/static/js/main.e17a12a4.js",
+    "static/js/453.748ac76e.chunk.js": "/static/js/453.748ac76e.chunk.js",
+    "static/media/projeto02-supermario.png": "/static/media/projeto02-supermario.82b7b4242b59a69aa08e.png",
+    "static/media/projeto01-landingpage.png": "/static/media/projeto01-landingpage.8b8b53d1ef46d3706825.png",
+    "static/media/projeto03-embreve.png": "/static/media/projeto03-embreve.ec888aa823683fa0eae1.png",
+    "static/media/RV.jpg": "/static/media/RV.a114fa5e082977e9cbce.jpg",
+    "static/media/RV_Terno.jpg": "/static/media/RV_Terno.8954cfefe75f50251e07.jpg",
+    "static/media/LOGORV.png": "/static/media/LOGORV.d39c685b6f55fad6231b.png",
+    "static/media/appscript.png": "/static/media/appscript.b907df5a985f67648edb.png",
+    "static/media/mysql.png": "/static/media/mysql.48faf36579a368914213.png",
+    "static/media/html.png": "/static/media/html.31497a13d5b51cea9b7d.png",
+    "static/media/csharp.png": "/static/media/csharp.234fd27ca2c8aab381ae.png",
+    "static/media/java.png": "/static/media/java.375f91150aebfc2e19ef.png",
+    "static/media/firebird.svg": "/static/media/firebird.04a96163cff03dc0fcba3bde9dc4b61e.svg",
+    "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
+    "static/media/bootstrap.svg": "/static/media/bootstrap.34d79061d4edac95157acd7cc7fdff03.svg",
+    "static/media/node.svg": "/static/media/node.6d0ce605479079334bce77dc7c3be9ab.svg",
+    "static/media/figma.svg": "/static/media/figma.d3e63c6d231c7af226642031e01f0276.svg",
+    "index.html": "/index.html",
+    "static/media/javascript.svg": "/static/media/javascript.5ee3c82fade3a5a9c98dc18702a4f717.svg",
+    "static/media/powerbi.svg": "/static/media/powerbi.8fcbb016430b9b7214c2522aa4b890e5.svg",
+    "static/media/github.svg": "/static/media/github.3b21c250a99986431958daaa9246a45a.svg",
+    "static/media/database.svg": "/static/media/database.c271c6e31f08e63a694f04bff236b424.svg",
+    "static/media/git.svg": "/static/media/git.8ecdc3c556e1278611a7cfbb49c857a2.svg",
+    "static/media/css3.svg": "/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
+    "main.ab7eb0ac.css.map": "/static/css/main.ab7eb0ac.css.map",
+    "main.e17a12a4.js.map": "/static/js/main.e17a12a4.js.map",
+    "453.748ac76e.chunk.js.map": "/static/js/453.748ac76e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab7eb0ac.css",
+    "static/js/main.e17a12a4.js"
+  ]
+}
