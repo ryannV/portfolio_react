@@ -3,6 +3,7 @@ import styles from './projetos.module.css'
 import LandingPage from '../../assets/images/projeto01-landingpage.png'
 import TrailerMario from '../../assets/images/projeto02-supermario.png'
 import DigiVPN from '../../assets/images/DigiVPN.png'
+import DigiFirebird from '../../assets/images/DigiFirebird.png'
 import EmBreve from '../../assets/images/projeto03-embreve.png'
 
 const projetos = () => {
@@ -48,8 +49,8 @@ const projetos = () => {
 
             <div>
                 <div className={styles.flex}>
-                    <div className={styles.img_port}  style={{backgroundImage: `url(${EmBreve})`}}>
-                        <div className={styles.overlay}>EmBreve</div>
+                    <div className={styles.img_port}  style={{backgroundImage: `url(${DigiFirebird})`}}>
+                        <div className={styles.overlay}>DigiFirebird</div>
                     </div>
 
                     <div className={styles.img_port} style={{backgroundImage: `url(${EmBreve})`}}>
