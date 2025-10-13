@@ -5,14 +5,14 @@ import Ryann from '../../assets/images/RV_rosto.jpg'
 const Sobre = () => {
   return (
     <section className={styles.sobre}>
-        <div className={styles.interface}>
+        <div className='interface'>
             {/* Sobre, Ryann Victor */}
             <h2>Sobre, <span>Ryann Victor.</span></h2>
             <p className={styles.destaque}>Estou finalizando minha graduação em <span>Engenharia de Software</span> pela Unileste, tenho 21 anos.</p>
 
             <div className={styles.flex}>
                 <div>
-                    <img className={styles.img_tag_sobre} src={Ryann} alt="Ryann Van"/>
+                    <img className={styles.img_tag_sobre} src={Ryann} alt="Ryann Foto"/>
                 </div>
                 <div>
                     <p className={styles.descricao}>

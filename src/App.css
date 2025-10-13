@@ -2,17 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Inter', sans-serif; */
   font-family: 'Poppins', sans-serif;
 }
 
 body
 {
-    background-image: linear-gradient( 
-        90.1deg, 
-        #25272c, 
-        #111827
-    );
+    background-image: var(--backgroundBody);
 }
 
 ::-webkit-scrollbar{

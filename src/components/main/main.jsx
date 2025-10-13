@@ -14,7 +14,7 @@ const Main = () => {
 
   return (
     <section className={styles.main}>
-        <div className={styles.interface}>
+        <div className='interface'>
 
             <div className={styles.flex}>
                 <div className={styles.perfil_container}>

@@ -2,14 +2,6 @@
 .sobre
 {
     padding: 100px;
-    user-select: none;
-}
-
-.interface
-{   
-    /* usado para definir um quadrante longe das bordas */
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .flex
@@ -17,11 +9,12 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: #242e3d;
+    background-color: var(--grid-color);
     border-radius: 20px;
     padding: 60px 40px;
     margin-top: 50px;
     margin-bottom: 50px;
+    user-select: none;
 }
 
 /* Imagem */
@@ -31,7 +24,6 @@
     width: 250px;
     height: 250 px;
     border-radius: 30px;
-    /* overflow: hidden; */
     display: inline-block; /* Para que o container se ajuste ao conteúdo */
     background-image: linear-gradient(to right, rgba(122,0,0,1) 8.1%, rgba(217,42,42,1) 74.4%); /* Exemplo de gradiente */
     padding: 3px;
@@ -45,25 +37,23 @@
     line-height: 40px;
     margin-bottom: 30px;
     text-align: center;
-    color: #fff;
+    color: var(--text-color-white);
+    user-select: none;
 }
 
 .sobre h2 span
 {
-    background-image: linear-gradient( 
-        90.1deg, 
-        rgba(122,0,0,1) 8.1%, 
-        rgba(217,42,42,1) 74.4% 
-    );
+    background-image: var(--backgroundRV);
     background-clip: text;
     color: transparent;
     background-repeat: no-repeat;
+    user-select: none;
 }
 
 /* Informações dos parágrafos */
 .destaque
 {
-    color: #fff;
+    color: var(--text-color-white);
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.3em;
@@ -72,18 +62,18 @@
 
 .descricao
 {
-    color: #fff;
+    color: var(--text-color-white);
     text-align: justify;
 }
 
 .descricao span
 {
-    color: rgba(217,42,42,1);
+    color: var(--red-claro);
 }
 
 .loc
 {
-    color: #fff;
+    color: var(--text-color-white);
     margin-top: 20px;
 }
 
@@ -97,19 +87,29 @@
 
 .grid_cards
 {
-    background-color: #242e3d;
+    background-color: var(--grid-color);
     border-radius: 20px;
     margin: 20px;
     width: 100%;
     height: 180px;
     box-sizing: border-box;
     border: 1px solid #3f4753;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grid_cards:hover
+{
+    border: 1px solid var(--red-claro);
+    box-shadow: 0 0 10px var(--red-escuro);
+    transform: translateY(-5px);
+    transition: transform 0.5s ease-out;
 }
 
 .grid_cards h4
 {
     text-align: center;
-    color: #fff;
+    color: var(--text-color-white);
     margin: 20px 0 20px 0;
     font-weight: 400;
     font-size: 1.5em;
@@ -134,7 +134,7 @@
 /* Cards de Experiencias */
 .grid_exp
 {
-    background-color: #242e3d;
+    background-color: var(--grid-color);
     border-radius: 20px;
     margin: 50px 0 50px 0;
     box-sizing: border-box;
@@ -145,7 +145,7 @@
 
 .grid_exp h4
 {
-    color: #fff;
+    color: var(--text-color-white);
     margin: 0 0 10px 0;
     font-weight: 400;
     font-size: 1.3em;
@@ -180,13 +180,13 @@
 
 .info_exp h5
 {
-    color: rgba(217,42,42,1);
+    color: var(--red-claro);
     font-weight: 400;
     font-size: 1.3em;
 }
 
 .info_exp p
 {
-    color: #fff;
+    color: var(--text-color-white);
     font-size: 1em;
 }

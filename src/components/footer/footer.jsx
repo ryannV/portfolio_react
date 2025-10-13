@@ -5,12 +5,12 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer>
-            <div className={styles.interface}>
+            <div className='interface'>
 
                 <div className={styles.line_footer}>
                     <div className={styles.flex}>
                         <div>
-                            <h1><NavLink to='' className={styles.logo}>&lt;RV/&gt;</NavLink></h1>
+                            <h1><NavLink to='' className='logo'>&lt;RV/&gt;</NavLink></h1>
                         </div>
 
                         <div className={styles.btn_social}>

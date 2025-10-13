@@ -21,7 +21,7 @@ const Ferramentas = () => {
 
   return (
     <section id="ferramentas" className={styles.ferramentas}>
-        <div className={styles.interface}>
+        <div className='interface'>
 
             <h2 className={styles.titulo}>Ferramentas & Tecnologias</h2>
             <p className={styles.descricao}>Esta seção apresenta o conjunto de tecnologias que domino e aplico no dia a dia para superar desafios 

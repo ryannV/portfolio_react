@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/global.css';
 // import { BrowserRouter } from 'react-router-dom';
 
 // Usando HashRouter para deploy em GitHub Pages

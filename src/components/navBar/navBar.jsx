@@ -1,14 +1,15 @@
 import styles from './NavBar.module.css'
 import '../../App.css';
+import '../../styles/global.css';
 
 import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <header>
-        <div className={styles.interface}>
+        <div className='interface'>
             <div>
-              <h1><NavLink to='' className={styles.logo}>&lt;RV/&gt;</NavLink></h1>
+              <h1><NavLink to='' className='logo'>&lt;RV/&gt;</NavLink></h1>
             </div>
 
             <nav>
