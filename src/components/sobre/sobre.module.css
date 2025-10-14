@@ -31,7 +31,7 @@
 }
 
 /* Titulo da Pagína */
-.sobre h2
+.titulo
 {
     font-size: 3em;
     line-height: 40px;
@@ -41,7 +41,7 @@
     user-select: none;
 }
 
-.sobre h2 span
+.titulo span
 {
     background-image: var(--backgroundRV);
     background-clip: text;
@@ -96,6 +96,7 @@
     border: 1px solid #3f4753;
     cursor: pointer;
     transition: 0.5s;
+    padding: 10px;
 }
 
 .grid_cards:hover
@@ -164,6 +165,12 @@
 {
     margin-top: 80px;
     margin-bottom: 80px;
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-color-white);
+    user-select: none;
+    
 }
 
 .grid
@@ -189,4 +196,118 @@
 {
     color: var(--text-color-white);
     font-size: 1em;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 1175px) {
+    .grid_cards h4{
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1058px) {
+    .grid_cards span{
+        font-size: 0.8em;
+    }
+
+    .flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 950px) {
+    .grid_cards
+    {
+        padding-bottom: 20px;
+        height: 100%;
+    }
+
+    .grid_cards h4{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 750px) {
+    .titulo
+    {
+        font-size: 2.5em;
+    }
+
+    .destaque{
+        font-size: 1em;
+    }
+
+    .grid_skills
+    {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .grid_cards h4{
+        font-size: 1em;
+    }
+
+    .grid_cards
+    {
+        margin: 10px 0 10px 0;
+    }
+
+    .sub_title{
+        font-size: 1.5em;
+    }
+
+    .grid_exp h4{
+        font-size: 1.1em;
+    }
+
+    .info_exp{
+        flex-direction: column;
+    }
+
+    .info_exp h5
+    {
+        font-size: 1em;
+    }
+
+    .info_exp p
+    {
+        font-size: 0.8em;
+    }
+
+    .grid_exp p
+    {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 630px) {
+    /* .img_tag_sobre
+    {
+        width: 150px;
+        height: 150px;
+    } */
+    .sobre
+    {
+        padding: 50px;
+    }
+
+    .titulo
+    {
+        font-size: 2em;
+    }
+
+    .destaque{
+        font-size: 1em;
+    }
+
+    .descricao
+    {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 550px) {
+    
 }

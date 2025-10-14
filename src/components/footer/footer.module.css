@@ -41,7 +41,7 @@ footer
 }
 
 .copy{
-    color: #fff;
+    color: var(--text-color-white);
     text-align: center;
     margin-top: 20px;
     font-weight: 200;
@@ -61,6 +61,28 @@ footer
 
 .down_footer p a
 {
-    color: #fff;
+    color: var(--text-color-white);
     text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+    .flex
+    {
+        flex-direction: column;
+    }
+
+    .btn_social
+    {
+        margin-top: 2em;
+    }
+
+    .down_footer p a
+    {
+        font-size: 0.8em;
+    }
+
+    .copy{
+        font-size: 0.8em;
+    }
 }

@@ -16,7 +16,7 @@
 
 .interface
 {   
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -30,7 +30,7 @@ header .interface
 @media (max-width: 680px) {
   header .interface 
   {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 20px;
   }
 }

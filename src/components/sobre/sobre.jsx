@@ -7,7 +7,7 @@ const Sobre = () => {
     <section className={styles.sobre}>
         <div className='interface'>
             {/* Sobre, Ryann Victor */}
-            <h2>Sobre, <span>Ryann Victor.</span></h2>
+            <h2 className={styles.titulo}>Sobre, <span>Ryann Victor.</span></h2>
             <p className={styles.destaque}>Estou finalizando minha graduação em <span>Engenharia de Software</span> pela Unileste, tenho 21 anos.</p>
 
             <div className={styles.flex}>
@@ -81,7 +81,7 @@ const Sobre = () => {
                 </div>
 
                 <div className={styles.grid_cards}>
-                    <h4>🚀 Proatividade & Responsabilidade</h4>
+                    <h4>🚀 Responsabilidade</h4>
                     <p>
                         <span>Autonomia</span>
                         <span>Comprometimento</span>
@@ -89,16 +89,15 @@ const Sobre = () => {
                         <span>Proatividade</span>
                     </p>
                 </div>
+            </div>
 
-                </div>
-
-                <div className={styles.grid_skills}>
+            <div className={styles.grid_skills}>
 
                 <div className={styles.grid_cards}>
                     <h4>🧠 Pensamento Analítico</h4>
                     <p>
                         <span>Resolução de problemas</span>
-                        <span>Pensamento lógico</span>
+                        <span>Raciocínio lógico</span>
                         <span>Aprendizado contínuo</span>
                         <span>Curiosidade técnica</span>
                     </p>
@@ -112,7 +111,6 @@ const Sobre = () => {
                         <span>Resiliência</span>
                     </p>
                 </div>
-
             </div>
 
             {/* Experiências */}
@@ -173,6 +171,7 @@ const Sobre = () => {
                         <h5>Centro Universitário do Leste de Minas Gerais - Unileste</h5>
                         <p><i class="bi bi-mortarboard" style={{marginRight: '10px'}}></i>Fevereiro 2022 - Dezembro 2025</p>
                     </div>
+
                     <p>Estou no último ano do curso de Engenharia de Software, onde adquiri conhecimentos sólidos em desenvolvimento de software,
                         metodologias ágeis, análise de sistemas e gestão de projetos. O curso me proporcionou uma base técnica robusta e habilidades práticas para atuar na área de tecnologia.
                     </p>
@@ -184,6 +183,7 @@ const Sobre = () => {
                         <h5>Escola Estadual Regina Pacis - MG</h5>
                         <p><i class="bi bi-mortarboard" style={{marginRight: '10px'}}></i>Fevereiro 2019 - Dezembro 2021</p>
                     </div>
+                    
                     <p> Conclusão do Ensino Médio.</p>
                 </div>
             </div>

@@ -54,9 +54,7 @@ const Ferramentas = () => {
                     <img src={NodeJS} alt="NodeJS   " className={styles.img_tech} />
                     <p>NodeJS</p>
                </div>
-            </div>  
 
-            <div className={styles.grids}>
                 {/* FIGMA */}
                <div className={styles.grids_cards}>
                     <img src={Figma} alt="Figma" className={styles.img_tech} />
@@ -82,9 +80,7 @@ const Ferramentas = () => {
                     <img src={Appscript} alt="Appscript" className={styles.img_tech} />
                     <p>Appscript</p>
                </div>
-            </div>  
-
-            <div className={styles.grids}>
+               
                 {/* FIREBIRD */}
                <div className={styles.grids_cards}>
                     <img src={Firebird} alt="Firebird" className={styles.img_tech} />

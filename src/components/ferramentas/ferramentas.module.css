@@ -1,19 +1,16 @@
-.ferramentas{
-    background-color: #111827;
-    padding: 60px 0 60px 0;
+.ferramentas {
+    background-color: var(--cinza-escuro);
+    padding: 60px 0;
 }
 
-
-h2.titulo
-{
+.titulo {
     color: var(--text-color-white);
-    font-size: 38px;
+    font-size: 2em;
     text-align: center;
     font-weight: 500;
 }
 
-.descricao
-{
+.descricao {
     padding-top: 20px;
     color: var(--text-color-white);
     margin: 10px 0;
@@ -21,49 +18,102 @@ h2.titulo
     text-align: center;
 }
 
-.grids
-{
-    display: flex;
-    justify-content: center;
+/* ---------- GRID PRINCIPAL ---------- */
+.grids {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+    gap: 20px; /* espaçamento entre os cards */
+    justify-items: center;
     align-items: center;
     margin-top: 80px;
 }
 
-.grids_cards
-{
-    width: 180px;
-    height: 130px;
+/* ---------- CARDS ---------- */
+.grids_cards {
+    width: 130px;
+    height: 100px;
     background-color: var(--cinza-claro);
-    margin: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     cursor: pointer;
     transition: 0.3s;
-    flex-direction: column;
-    border-radius: 20px 20px 0  0;
+    border-radius: 20px 20px 0 0;
     border-bottom: 4px solid var(--red-claro);
 }
 
-.grids_cards:hover
-{   
+.grids_cards:hover {   
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
-.img_tech
-{
+/* ---------- IMAGEM ---------- */
+.img_tech {
     padding-top: 10px;
     width: 50px;
     height: 50px;
-    filter: invert(100%);
     filter: brightness(0) invert(1);
 }
 
-.grids div p{
+/* ---------- TEXTO ---------- */
+.grids div p {
     color: var(--text-color-white);
     margin: 10px 0;
     font-weight: 200;
     text-align: center;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 1024px) {
+    .grids {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas médias */
+    }
+}
+
+@media (max-width: 680px) {
+    .titulo{
+        font-size: 1.5em;
+    }
+
+    .grids {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas pequenas */
+        gap: 15px;
+    }
+
+    .grids_cards {
+        width: 100px;
+        height: 80px;
+    }
+
+    .descricao {
+        margin: 10px;
+    }
+
+  .img_tech {
+        width: 35px;
+        height: 35px;
+    }
+
+    .ferramentas {
+        background-color: var(--cinza-escuro);
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .grids {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas muito pequenas */
+        gap: 10px;
+    }
+
+    .grids_cards {
+        width: 90px;
+        height: 70px;
+    }
+
+    .titulo {
+        font-size: 1.5em;
+    }
 }

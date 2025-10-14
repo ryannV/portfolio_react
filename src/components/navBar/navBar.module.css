@@ -44,3 +44,18 @@ header nav ul li
 .icon_theme:hover{
     transform: rotate(50deg); 
 }
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+@media (max-width: 680px) {
+    header nav
+    {   
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li
+    {   
+        display: flex;
+        padding: 0.5em;
+    }
+}

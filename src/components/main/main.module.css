@@ -14,33 +14,25 @@
 {
     font-weight: 500;
     font-size: 5em;
-    background-image: linear-gradient( 
-        90.1deg, 
-        rgba(122,0,0,1) 8.1%, 
-        rgba(217,42,42,1) 74.4% 
-    );
+    background-image: var(--backgroundRV);
     
     /* A propriedade crucial: recorta o fundo para que ele apareça apenas onde há texto */
-    -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+    -webkit-background-clip: text;
     background-clip: text;
-    
-    /* Torna o texto transparente para que o fundo (gradiente) seja visível */
     color: transparent;
-    
-    /* Para garantir que o gradiente não se repita caso o texto seja muito longo */
     background-repeat: no-repeat;
 }
 
 .txt_main h3
 {
-    color: #fff;
+    color: var(--text-color-white);
     margin: 10px 0;
     font-weight: 400;
 }
 
 .txt_main h4
 {
-    color: #fff;
+    color: var(--text-color-white);
     margin: 10px 0;
     font-weight: 200;
 }
@@ -53,7 +45,7 @@
     border-radius: 50%; 
     /* overflow: hidden; */
     display: inline-block; /* Para que o container se ajuste ao conteúdo */
-    background-image: linear-gradient(to right, rgba(122,0,0,1) 8.1%, rgba(217,42,42,1) 74.4%); /* Exemplo de gradiente */
+    background-image: var(--backgroundRV);
     padding: 3px;
     box-sizing: border-box;
 
@@ -114,7 +106,7 @@
     border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
-    color: #fff;
+    color: var(--text-color-white);
 }
 
 .btn_contato button:hover
@@ -151,4 +143,31 @@
 
 .icon_white{
     color: #fff;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 680px) {
+    .txt_main h1
+    {
+        font-size: 3em;
+    }
+
+    .txt_main h3
+    {
+        margin: 15px 0;
+        font-size: 1.2em;
+    }
+
+    .txt_main h4
+    {
+        margin: 15px 0;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+
 }
