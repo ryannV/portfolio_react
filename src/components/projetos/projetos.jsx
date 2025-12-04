@@ -8,13 +8,15 @@ import TrailerMario from '../../assets/images/projeto02-supermario.png';
 import DigiVPN from '../../assets/images/DigiVPN.png';
 import DigiFirebird from '../../assets/images/DigiFirebird.png';
 import EmBreve from '../../assets/images/projeto03-embreve.png';
+import CRUDUsuarios from '../../assets/images/CRUD_USUARIOS.png';
+import MINIBLOG from '../../assets/images/MINI_BLOG.png';
 
 const Projetos = () => {
     const [showModal, setShowModal] = useState(false);
     const [resumoAtivo, setResumoAtivo] = useState('');
 
     const abrirResumo = (projeto) => {
-        setResumoAtivo(projeto);
+        setResumoAtivo(projeto);    
         setShowModal(true);
     }
 
@@ -31,6 +33,63 @@ const Projetos = () => {
 
             {/* 1° Grid */}
             <div className={styles.grid}>
+
+                <div className={styles.flex}>
+                    {/* Image Overlay */}
+                    <div className={styles.img_port} style={{backgroundImage: `url(${CRUDUsuarios})`}}>
+                        <div className={styles.overlay}>CRUD Usuarios</div>
+                    </div>
+
+                    {/* Botões */}
+                    <div className={styles.gap}>
+                        <a><button>Visualizar</button></a>
+                        <a href='https://github.com/ryannV/crud_cadastro_usuario'><button>Repositório</button></a>
+                    </div>
+                </div>
+
+                <div className={styles.flex}>
+                    {/* Image Overlay */}
+                    <div className={styles.img_port} style={{backgroundImage: `url(${MINIBLOG})`}}>
+                        <div className={styles.overlay}>MiniBlog</div>
+                    </div>
+
+                    {/* Botões */}
+                    <div className={styles.gap}>
+                        <a href='https://ryannv.github.io/mini_blog/#/'><button>Visualizar</button></a>
+                        <a href='https://github.com/ryannV/mini_blog'><button>Repositório</button></a>
+                    </div>
+                </div>
+
+                <div className={styles.flex}>
+                    {/* Image Overlay */}
+                    <div className={styles.img_port} style={{backgroundImage: `url(${DigiVPN})`}}>
+                        <div className={styles.overlay}>DigiVPN</div>
+                    </div>
+
+                    {/* Botões */}
+                    <div className={styles.gap}>
+                        <button onClick={() => abrirResumo("DigiVPN")}>Resumo</button>
+                        {console.log('resumo ativo é ' + resumoAtivo)}
+                    </div>
+                </div>
+                
+             </div>
+
+            {/* 2° Grid */}
+            <div className={styles.grid}>
+                <div className={styles.flex}>
+
+                    {/* Image Overlay */}
+                    <div className={styles.img_port}  style={{backgroundImage: `url(${DigiFirebird})`}}>
+                        <div className={styles.overlay}>DigiFirebird</div>
+                    </div>
+
+                    {/* Botões */}
+                    <div className={styles.gap}>
+                        <button onClick={() => abrirResumo("DigiFirebird")}>Resumo</button>
+                    </div>
+                </div>
+
                 <div className={styles.flex}>
 
                     {/* Image Overlay */}
@@ -58,64 +117,9 @@ const Projetos = () => {
                         <a href="https://github.com/ryannV/trailer-super-mario"><button>Repositório</button></a>
                     </div>
                 </div>
+                
 
-                <div className={styles.flex}>
-
-                    {/* Image Overlay */}
-                    <div className={styles.img_port} style={{backgroundImage: `url(${DigiVPN})`}}>
-                        <div className={styles.overlay}>DigiVPN</div>
-                    </div>
-
-                    {/* Botões */}
-                    <div className={styles.gap}>
-                        <button onClick={() => abrirResumo("DigiVPN")}>Resumo</button>
-                        {console.log('resumo ativo é ' + resumoAtivo)}
-                    </div>
-                </div>
-            </div>        
-
-            {/* 2° Grid */}
-            <div className={styles.grid}>
-                <div className={styles.flex}>
-
-                    {/* Image Overlay */}
-                    <div className={styles.img_port}  style={{backgroundImage: `url(${DigiFirebird})`}}>
-                        <div className={styles.overlay}>DigiFirebird</div>
-                    </div>
-
-                    {/* Botões */}
-                    <div className={styles.gap}>
-                        <button onClick={() => abrirResumo("DigiFirebird")}>Resumo</button>
-                    </div>
-                </div>
-
-                <div className={styles.flex}>
-
-                    {/* Image Overlay */}
-                    <div className={styles.img_port} style={{backgroundImage: `url(${EmBreve})`}}>
-                        <div className={styles.overlay}>EmBreve</div>
-                    </div>
-
-                    {/* Botões */}
-                    <div className={styles.gap}>
-                        <a><button>Visualizar</button></a>
-                        <a><button>Repositório</button></a>
-                    </div>
-                </div>
-
-                <div className={styles.flex}>
-
-                    {/* Image Overlay */}
-                    <div className={styles.img_port} style={{backgroundImage: `url(${EmBreve})`}}>
-                        <div className={styles.overlay}>EmBreve</div>
-                    </div>
-
-                    {/* Botões */}
-                    <div className={styles.gap}>
-                        <a><button>Visualizar</button></a>
-                        <a><button>Repositório</button></a>
-                    </div>
-                </div>
+                
             </div>
 
         </div>

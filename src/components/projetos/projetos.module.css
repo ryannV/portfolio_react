@@ -24,12 +24,6 @@
 
 /* ---------- GRID PRINCIPAL ---------- */
 
-/* .grid {
-    margin: 60px 0 100px 0;
-    display: flex;
-    justify-content: space-between;
-} */
-
 .grid 
 {
   margin: 60px 0 100px 0;
@@ -198,10 +192,45 @@
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
-    margin: 0;
+    margin: 0 20px 0 20px;
+  }
+
+  .titulo{
+    font-size: 24px;
   }
 
   .flex{
     margin-top: 50px;
+  }
+
+  .gap button{
+    font-size: 14px;
+  }
+
+  .modalConteudo 
+  {
+    background-color: #fff;
+    color: #222;
+    width: 80%;
+    max-width: 80%;
+    max-height: 90%;
+    padding: 2rem;
+  }
+
+  .modalConteudo h3 
+  {
+    margin-bottom: .4rem;
+    font-size: .8rem;
+  }
+
+  .modalConteudo p 
+  {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .fechar 
+  {
+    font-size: .6rem;
   }
 }

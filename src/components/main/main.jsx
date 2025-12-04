@@ -5,8 +5,8 @@ import Ryann from '../../assets/images/RV.jpg'
 const Main = () => {
     const downloadCurriculo = () => {
         const link = document.createElement("a");
-        link.href = "https://drive.google.com/uc?export=download&id=18NHONNjg6Y1OHsQm4juN7t3SPbc_vAVp";
-        link.download = "CV Ryann Victor.pdf";
+        link.href = "https://drive.google.com/uc?export=download&id=1SKeTpXmwdRovHNqBdhSKa5MIV-z8EuIV";
+        link.download = "Curriculo Ryann Victor.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

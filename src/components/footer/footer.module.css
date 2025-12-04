@@ -86,3 +86,11 @@ footer
         font-size: 0.8em;
     }
 }
+
+@media (max-width: 352px) {
+    .btn_social
+    {
+        margin:0;
+        font-size: 15px;
+    }
+}
