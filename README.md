@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# 🚀 Meu Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao meu portfólio!  
+Este projeto foi criado para apresentar de maneira clara, objetiva e profissional minha trajetória na área de TI, incluindo minha formação, experiências, conhecimentos técnicos e projetos desenvolvidos.
+Aqui, recrutadores e a comunidade dev podem conhecer melhor meu perfil, minhas habilidades e meu crescimento contínuo como desenvolvedor!
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📘 Sobre o Projeto
 
-### `npm start`
+Este portfólio é uma aplicação web desenvolvida em **React**, com o objetivo de:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Expor minha carreira profissional e acadêmica  
+- Demonstrar as ferramentas e tecnologias que domino  
+- Apresentar projetos reais que desenvolvi  
+- Fortalecer minha presença profissional na comunidade dev  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O foco do projeto é ser simples, direto e visualmente agradável, funcionando como uma apresentação pessoal técnica.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎯 Objetivo
 
-### `npm run build`
+Criar um ambiente onde eu possa:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Me apresentar profissionalmente  
+- Demonstrar minhas competências técnicas  
+- Facilitar a análise do meu perfil por recrutadores  
+- Compartilhar minha evolução com outros desenvolvedores  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧩 Problema que o Projeto Resolve
 
-### `npm run eject`
+Recrutadores e profissionais de TI costumam pesquisar perfis de candidatos, e muitas vezes o currículo tradicional não mostra o que realmente sabemos fazer.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Este portfólio resolve isso oferecendo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Uma apresentação visual  
+- Informações atualizadas sobre minha jornada  
+- Tecnologias e projetos reunidos num único lugar  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tecnologias Utilizadas
 
-## Learn More
+- **React.js**  
+- **HTML5**  
+- **CSS3**  
+- **React Router DOM**  
+- **React Hooks**  
+- Organização com pages, components, useContext, hooks nativos  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📄 Funcionalidades Principais
 
-### Code Splitting
+- [Inicio] Página inicial com apresentação, curriculo e ferramentas/tecnologias
+- [Sobre] Página sobre minha carreira profissional, trajetória acadêmica, soft e hards skills 
+- [Ferramentas] Página com interação para pagina inicial, sessão de ferramentas/tecnologias  
+- [Projetos] Página com projetos desenvolvidos   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🎯 Público-Alvo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Recrutadores de empresas de tecnologia  
+- Desenvolvedores da comunidade dev  
+- Pessoas interessadas em conhecer minha trajetória  
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🏗️ Arquitetura do Projeto
 
-### Advanced Configuration
+Não adota uma arquitetura complexa.  
+O projeto segue boas práticas de organização:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Pages**  
+- **Components**  
+- **useContext**  
+- **React Hooks** para gerenciamento básico de estado
 
-### Deployment
+Simples, limpo e fácil de manter.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📌 Status do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Concluído**, porém **em constante evolução** conforme novos conhecimentos, experiências e projetos surgem.
+
+---
+
+## 🌟 Diferenciais do Projeto
+
+- Apresenta minha trajetória de forma profissional e organizada  
+- Código limpo e estruturado com boas práticas de React  
+- Facilita o contato com recrutadores  
+- Permite acompanhar minha evolução como desenvolvedor  
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Adicionar novos projetos  
+- [ ] Atualizar tecnologias conforme avanço dos estudos  
+- [ ] Criar seção de certificados  
+- [ ] Adicionar versão em inglês
+- [ ] Implementar tema dark 
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a **MIT License** — veja abaixo:
+
