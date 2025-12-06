@@ -111,5 +111,5 @@ Simples, limpo e fácil de manter.
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a **MIT License** — veja abaixo:
+Este projeto está licenciado sob a **MIT License**
 
