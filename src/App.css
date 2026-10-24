@@ -1,21 +1,6 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body
-{
-    background-image: var(--backgroundBody);
-}
-
-::-webkit-scrollbar{
-    background-color: #1a243b;
-}
-
-::-webkit-scrollbar-thumb
-{
-    background-color: #2e3e63;
-    border-radius: 5px;
+/* App layout base - herda tokens e reset de global.css */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

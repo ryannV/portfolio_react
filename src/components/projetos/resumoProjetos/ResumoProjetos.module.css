@@ -1,59 +1,297 @@
-.resumo_container {
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 16px;
-  padding: 28px;
-  margin: 24px 0;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+.resumoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.resumo_container:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+/* Header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
 }
 
-.resumo_titulo {
-  font-size: 1.8rem;
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resumoTitulo {
+  font-family: var(--font-main);
+  font-size: 1.65rem;
   font-weight: 700;
-  color: #1e1e1e;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin: 0;
 }
 
-.resumo_descricao {
-  color: #444;
-  line-height: 1.7;
-  font-size: 1rem;
-  text-align: justify;
+.badgesRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.resumo_descricao p {
-  margin-bottom: 14px;
-}
-
-.resumo_descricao strong {
-  color: #1d4ed8; /* Azul profissional e agradável */
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 600;
+  color: var(--red-primary);
+  background: var(--red-subtle);
+  border: 1px solid rgba(239, 35, 60, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
 }
 
-.empty {
-  text-align: center;
-  color: #777;
-  background-color: #f9f9f9;
-  border: 1px dashed #ddd;
+.statusBadge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* Seções de Conteúdo */
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionHeading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionHeading i {
+  color: var(--red-primary);
+}
+
+.paragraph {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.paragraph strong {
+  color: var(--text-primary);
+}
+
+/* Diagrama de Arquitetura */
+.flowContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.flowStep {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color var(--transition-fast);
+}
+
+.flowStep:hover {
+  border-color: var(--border-hover);
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepNumber {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background-image: var(--backgroundRV);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.flowArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Métricas e Resultados */
+.metricsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.metricItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.metricItem i {
+  color: var(--status-online);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Ficha Técnica (MetaBox) */
+.metaBox {
+  background: rgba(239, 35, 60, 0.04);
+  border: 1px solid rgba(239, 35, 60, 0.18);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.88rem;
+  flex-wrap: wrap;
+}
+
+.metaLabel {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--red-primary);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.metaVal {
+  color: var(--text-primary);
+  flex: 1;
+}
+
+/* Ações Rápidas no Modal */
+.modalActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.btnModalPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  background-image: var(--backgroundRV);
+  color: #fff;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btnModalPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(239, 35, 60, 0.4);
+}
+
+.btnModalSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btnModalSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.restrictedNotice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 /* Responsividade */
-@media (max-width: 640px) {
-  .resumo_titulo{
-    font-size: 1rem;
-    margin-bottom: 5px;
+@media (max-width: 720px) {
+  .flowContainer {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .resumo_descricao p{
-    font-size: .5rem;
+  .flowArrow {
+    transform: rotate(90deg);
+    padding: 2px 0;
   }
 
+  .resumoTitulo {
+    font-size: 1.35rem;
+  }
+
+  .metaRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .metaLabel {
+    min-width: unset;
+  }
 }

@@ -1,173 +1,435 @@
-.main
-{
-    padding: 170px 0 170px 0;
-    user-select: none;
+.main {
+  min-height: calc(100vh - 70px);
+  min-height: calc(100dvh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 20px 0;
+  user-select: none;
+  box-sizing: border-box;
 }
 
-.main .flex
-{ 
-    text-align: center;
-    margin-bottom: 15px;
+.mainInterface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.txt_main h1
-{
-    font-weight: 500;
-    font-size: 5em;
-    background-image: var(--backgroundRV);
-    
-    /* A propriedade crucial: recorta o fundo para que ele apareça apenas onde há texto */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-repeat: no-repeat;
+.main .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
-.txt_main h3
-{
-    color: var(--text-color-white);
-    margin: 10px 0;
-    font-weight: 400;
+.perfil_container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  background: var(--red-primary);
+  padding: 3px;
+  box-sizing: border-box;
+  overflow: visible;
+  box-shadow: 0 0 20px rgba(239, 35, 60, 0.4);
 }
 
-.txt_main h4
-{
-    color: var(--text-color-white);
-    margin: 10px 0;
-    font-weight: 200;
-}
-
-.perfil_container
-{   
-    position: relative;
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; 
-    /* overflow: hidden; */
-    display: inline-block; /* Para que o container se ajuste ao conteúdo */
-    background-image: var(--backgroundRV);
-    padding: 3px;
-    box-sizing: border-box;
-
-}
-
-.perfil_img
-{   
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
-    border-radius: 50%;
-    border: 3px solid #20232A;
-    box-sizing: border-box;
+.perfil_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-sizing: border-box;
+  display: block;
+  transform: scale(1.15);
+  transform-origin: center 15%;
+  clip-path: circle(50%);
 }
 
 .status_online {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 25px;
-    height: 25px;
-    background-color: #4CAF50;
-    border-radius: 50%; 
-    border: 3px solid #20232A; 
-    transform: translate(25%, 25%); /* Ajusta a posição para que metade do ponto fique para fora */
-    animation: pulsar 1.5s infinite ease-out;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--status-online);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-shadow: var(--status-online-glow);
+  animation: pulsar 2s infinite ease-out;
+  z-index: 10;
 }
 
 @keyframes pulsar {
-    0% {
-        transform: translate(25%, 25%) scale(1); /* Posição normal, escala 100% */
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); /* Sombra inicial transparente */
-    }
-    70% {
-        transform: translate(25%, 25%) scale(1.1); /* Escala ligeiramente maior */
-        box-shadow: 0 0 0 1px rgba(76, 175, 80, 0); /* Sombra se expande e fica transparente */
-    }
-    100% {
-        transform: translate(25%, 25%) scale(1); /* Volta à escala normal */
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); /* Sombra desaparece */
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
-.btn_contato
-{
-    display: flex;
-    justify-content: center;
+/* Textos do Hero */
+.txt_main h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 4.2rem;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  background-image: var(--backgroundRV);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  margin-bottom: 8px;
 }
 
-.btn_contato button
-{
-    margin-top: 40px;
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #9b0c0c;
-    border: 0;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: var(--text-color-white);
+.txt_main h2 {
+  color: var(--text-primary);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin: 0 0 14px 0;
 }
 
-.btn_contato button:hover
-{
-    background-color: #b11212;
-    transform: scale(1.02);
+.heroSummary {
+  max-width: 660px;
+  margin: 0 auto 22px auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
-.btn_social
-{
-    
-    text-align: center;
-    margin-top: 40px;
+.heroSummary strong {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-.btn_social button
-{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #2f3a4b;
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0 15px;
-    transition: 0.2s;
+/* Badges de Stack */
+.techBadgesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn_social button:hover
-{
-    background-color: #9b0c0c;
-    transform: scale(1.1);
+.techBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition-fast);
 }
 
-.icon_white{
-    color: #fff;
+.techBadge i {
+  color: var(--red-primary);
+  font-size: 0.95rem;
 }
 
-@media (max-width: 1024px) {
-
+.techBadge:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 35, 60, 0.15);
 }
 
+/* Grupo de Ações */
+.actionsGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+/* Botão Download CV - Primário com Gradiente */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 34px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  background-color: var(--red-primary);
+  background: var(--backgroundRV) !important;
+  border: none !important;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(239, 35, 60, 0.38);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btnPrimary i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 26px rgba(239, 35, 60, 0.58);
+}
+
+.btnPrimary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Botão Secundário - Copiar E-mail com Glassmorphism */
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 26px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btnSecondary i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.btnSecondary:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btnSecondary.btnCopied {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: var(--status-online);
+  color: var(--status-online);
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+}
+
+/* Botão de Navegação - Ver Projetos */
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 26px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btnOutline i {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.btnOutline:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Redes Sociais */
+.btn_social {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.btn_social button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn_social button:hover {
+  background-color: var(--red-primary);
+  border-color: var(--red-primary);
+  color: #fff;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 0 16px rgba(239, 35, 60, 0.4);
+}
+
+/* Indicador de Rolagem */
+.scrollDownIndicator {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-top: 14px;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.scrollDownIndicator:hover {
+  color: var(--red-primary);
+  transform: translateY(2px);
+}
+
+.scrollText {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.scrollChevron {
+  font-size: 0.95rem;
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+/* Responsividade */
 @media (max-width: 680px) {
-    .txt_main h1
-    {
-        font-size: 3em;
-    }
+  .main {
+    min-height: calc(100vh - 70px);
+    min-height: calc(100dvh - 70px);
+    padding: 20px 0 16px 0;
+  }
 
-    .txt_main h3
-    {
-        margin: 15px 0;
-        font-size: 1.2em;
-    }
+  .perfil_container {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+  }
 
-    .txt_main h4
-    {
-        margin: 15px 0;
-        font-size: 1em;
-    }
+  .txt_main h1 {
+    font-size: 2.6rem;
+  }
+
+  .txt_main h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .heroSummary {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    padding: 0 12px;
+    margin-bottom: 18px;
+  }
+
+  .techBadgesList {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .techBadge {
+    padding: 5px 11px;
+    font-size: 0.75rem;
+  }
+
+  .actionsGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .btnPrimary,
+  .btnSecondary,
+  .btnOutline {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+
+  .btn_social {
+    margin-top: 18px;
+  }
 }
 
 @media (max-width: 400px) {
+  .txt_main h1 {
+    font-size: 2.1rem;
+  }
 
+  .btn_social button {
+    margin: 0 6px;
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
 }

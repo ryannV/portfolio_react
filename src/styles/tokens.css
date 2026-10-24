@@ -1,0 +1,104 @@
+/* Sistema de Design Tokens: Suporte Nativo a Dark e Light Mode */
+
+:root,
+[data-theme='dark'] {
+  /* Paleta Base Escura - Deep Obsidian */
+  --bg-primary: #08090d;
+  --bg-secondary: #0e111a;
+  --bg-card: rgba(16, 20, 31, 0.72);
+  --bg-card-hover: rgba(24, 30, 48, 0.88);
+  --bg-code: #0b0d14;
+
+  /* Identidade Vermelha */
+  --red-primary: #ef233c;
+  --red-hover: #ff3b53;
+  --red-dark: #7a0000;
+  --red-darker: #4a0000;
+  --red-subtle: rgba(239, 35, 60, 0.12);
+  --red-glow: 0 0 25px rgba(239, 35, 60, 0.32);
+  --red-glow-strong: 0 0 35px rgba(239, 35, 60, 0.55);
+  
+  /* Gradiente Oficial RV */
+  --backgroundRV: linear-gradient(135deg, #7a0000 0%, #ef233c 55%, #ff4d6d 100%);
+  --backgroundBody: radial-gradient(circle at 50% 0%, rgba(122, 0, 0, 0.15) 0%, #08090d 65%);
+
+  /* Texto */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-code: #e2e8f0;
+
+  /* Glassmorphism e Bordas */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(239, 35, 60, 0.45);
+  --glass-bg: rgba(11, 14, 23, 0.82);
+  --glass-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6);
+
+  /* Status */
+  --status-online: #10b981;
+  --status-online-glow: 0 0 12px rgba(16, 185, 129, 0.6);
+
+  /* Botão de Tema */
+  --theme-toggle-bg: rgba(255, 255, 255, 0.05);
+  --theme-toggle-border: rgba(255, 255, 255, 0.1);
+  --theme-toggle-color: #facc15; /* Sol amarelo suave */
+
+  /* Tipografia */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  /* Formas e Transições */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-smooth);
+  --transition-normal: 250ms var(--ease-smooth);
+}
+
+[data-theme='light'] {
+  /* Paleta Base Clara - Pure Slate & Clean Surface */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #edf2f7;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: #ffffff;
+  --bg-code: #0f172a; /* Bloco de código escuro para legibilidade */
+
+  /* Identidade Vermelha em Fundo Claro */
+  --red-primary: #dc2626;
+  --red-hover: #b91c1c;
+  --red-dark: #991b1b;
+  --red-darker: #7f1d1d;
+  --red-subtle: rgba(220, 38, 38, 0.08);
+  --red-glow: 0 0 20px rgba(220, 38, 38, 0.18);
+  --red-glow-strong: 0 0 30px rgba(220, 38, 38, 0.35);
+
+  /* Gradiente Oficial RV para Fundo Claro */
+  --backgroundRV: linear-gradient(135deg, #991b1b 0%, #dc2626 55%, #ef4444 100%);
+  --backgroundBody: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.07) 0%, #f8fafc 70%);
+
+  /* Texto */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-code: #f8fafc;
+
+  /* Glassmorphism e Bordas */
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-card: rgba(15, 23, 42, 0.07);
+  --border-hover: rgba(220, 38, 38, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
+
+  /* Status */
+  --status-online: #059669;
+  --status-online-glow: 0 0 10px rgba(5, 150, 105, 0.5);
+
+  /* Botão de Tema */
+  --theme-toggle-bg: rgba(15, 23, 42, 0.04);
+  --theme-toggle-border: rgba(15, 23, 42, 0.12);
+  --theme-toggle-color: #6366f1; /* Lua azul/violeta */
+}

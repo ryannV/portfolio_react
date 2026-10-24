@@ -1,121 +1,209 @@
-import styles from './Ferramentas.module.css';
+import { useState, useMemo } from 'react';
+import styles from './ferramentas.module.css';
 
-import HTML5 from '../../assets/icons/html.png';
+import HTML5 from '../../assets/icons/html.svg';
 import CSS3 from '../../assets/icons/css3.svg';
 import JS from '../../assets/icons/javascript.svg';
-import Java from '../../assets/icons/java.png';
+import Java from '../../assets/icons/java.svg';
 import Appscript from '../../assets/icons/appscript.png';
 import Git from '../../assets/icons/git.svg';
-import MySQL from '../../assets/icons/mysql.png';
+import MySQL from '../../assets/icons/mysql.svg';
 import Oracle from '../../assets/icons/database.svg';
 import PowerBI from '../../assets/icons/powerbi.svg';
 import ReactIcon from '../../assets/icons/react.svg';
 import NodeJS from '../../assets/icons/node.svg';
 import Figma from '../../assets/icons/figma.svg';
 import Bootstrap from '../../assets/icons/bootstrap.svg';
-import Csharp from '../../assets/icons/csharp.png';
+import Csharp from '../../assets/icons/csharp.svg';
 import Firebird from '../../assets/icons/firebird.svg';
 import GitHub from '../../assets/icons/github.svg';
+import Supabase from '../../assets/icons/supabase.svg';
 
+/**
+ * Definição dos pilares técnicos de engenharia e suas respectivas tecnologias
+ */
+const TECH_PILLARS = [
+  {
+    id: 'frontend',
+    title: 'Front-End & Interfaces',
+    icon: 'bi bi-window-fullscreen',
+    description:
+      'Aplicações reativas, componentização escalável, acessibilidade semântica e design tokens modernos.',
+    items: [
+      { name: 'React', type: 'image', icon: ReactIcon, tag: 'Principal Stack' },
+      { name: 'JavaScript', type: 'image', icon: JS, tag: 'Linguagem Core' },
+      { name: 'CSS Modules & Tokens', type: 'image', icon: CSS3, tag: 'Design System' },
+      { name: 'HTML5 Semântico', type: 'image', icon: HTML5, tag: 'SEO & Semântica' },
+      { name: 'Vite & Mobile PWA', type: 'icon', icon: 'bi bi-lightning-charge-fill', tag: 'Build & PWA' },
+      { name: 'Bootstrap', type: 'image', icon: Bootstrap, tag: 'Produtividade UI' },
+      { name: 'Figma', type: 'image', icon: Figma, tag: 'Prototipagem UI' },
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Back-End & Automação',
+    icon: 'bi bi-server',
+    description:
+      'Construção de serviços, regras de negócio seguras, rotinas de integração assíncronas e scripts corporativos.',
+    items: [
+      { name: 'Node.js', type: 'image', icon: NodeJS, tag: 'APIs & Microserviços' },
+      { name: 'REST APIs', type: 'icon', icon: 'bi bi-arrow-left-right', tag: 'Endpoints & JSON' },
+      { name: 'Google Apps Script', type: 'image', icon: Appscript, tag: 'Automação Corporativa' },
+      { name: 'Java', type: 'image', icon: Java, tag: 'Back-End & POO' },
+      { name: 'C#', type: 'image', icon: Csharp, tag: 'Aplicações & Desktop' },
+    ],
+  },
+  {
+    id: 'database',
+    title: 'Bancos de Dados & Analytics',
+    icon: 'bi bi-database-fill-gear',
+    description:
+      'Modelagem relacional, otimização de consultas SQL, auditoria contínua e modelagem de indicadores industriais.',
+    items: [
+      { name: 'Firebird SQL', type: 'image', icon: Firebird, tag: 'Em Produção (Digifarma)' },
+      { name: 'MySQL', type: 'image', icon: MySQL, tag: 'Bases Relacionais' },
+      { name: 'Oracle SQL', type: 'image', icon: Oracle, tag: 'Consultas Corporativas' },
+      { name: 'Power BI (DAX / M)', type: 'image', icon: PowerBI, tag: 'ETL & Gestão (Aperam)' },
+      { name: 'Supabase', type: 'image', icon: Supabase, tag: 'BaaS & PostgreSQL' },
+    ],
+  },
+  {
+    id: 'devops',
+    title: 'Engenharia, Qualidade & Tooling',
+    icon: 'bi bi-terminal-split',
+    description:
+      'Fluxos de versionamento em equipe, testes de endpoints, diagnósticos avançados e pipeline de entrega.',
+    items: [
+      { name: 'Git', type: 'image', icon: Git, tag: 'Controle de Versão' },
+      { name: 'GitHub', type: 'image', icon: GitHub, tag: 'Deploy & CI/CD' },
+      { name: 'DBeaver', type: 'icon', icon: 'bi bi-database-check', tag: 'Gestão Multibanco' },
+      { name: 'Postman', type: 'icon', icon: 'bi bi-send-check-fill', tag: 'Testes de APIs' },
+    ],
+  },
+  {
+    id: 'ia',
+    title: 'Inteligência Artificial',
+    icon: 'bi bi-cpu-fill',
+    description:
+      'Uso prático de IA generativa para acelerar desenvolvimento, engenharia de prompt e automações cognitivas.',
+    items: [
+      { name: 'Engenharia de Prompt', type: 'icon', icon: 'bi bi-chat-square-dots-fill', tag: 'LLM & Workflows' },
+      { name: 'Gemini', type: 'icon', icon: 'bi bi-stars', tag: 'Google AI' },
+      { name: 'ChatGPT', type: 'icon', icon: 'bi bi-robot', tag: 'OpenAI' },
+      { name: 'Claude', type: 'icon', icon: 'bi bi-lightning-fill', tag: 'Anthropic' },
+      { name: 'GitHub Copilot', type: 'icon', icon: 'bi bi-git', tag: 'Code Assist' },
+    ],
+  },
+];
+
+const CATEGORIES = [
+  { id: 'all', label: 'Todas as Áreas' },
+  { id: 'frontend', label: 'Front-End' },
+  { id: 'backend', label: 'Back-End & Automação' },
+  { id: 'database', label: 'Bancos & Analytics' },
+  { id: 'devops', label: 'Engenharia & Tooling' },
+  { id: 'ia', label: 'Inteligência Artificial' },
+];
+
+/**
+ * Componente Ferramentas - Apresentação estruturada por pilares técnicos
+ * @returns {JSX.Element}
+ */
 const Ferramentas = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const filteredPillars = useMemo(() => {
+    if (activeCategory === 'all') return TECH_PILLARS;
+    return TECH_PILLARS.filter((pillar) => pillar.id === activeCategory);
+  }, [activeCategory]);
 
   return (
-    <section id="ferramentas" className={styles.ferramentas}>
-        <div className='interface'>
+    <section id="ferramentas" className={styles.ferramentas} aria-label="Stack Técnica e Ferramentas">
+      <div className="interface">
+        {/* Cabeçalho da Seção */}
+        <header className={styles.header}>
+          <h2 className={styles.titulo}>
+            Stack Técnica &amp; <span>Arquitetura</span>
+          </h2>
+          <p className={styles.descricao}>
+            Organização por competências da minha atuação prática — de interfaces reativas e APIs
+            desacopladas até modelagem de bancos relacionais e inteligência de dados.
+          </p>
+        </header>
 
-            <h2 className={styles.titulo}>Ferramentas & Tecnologias</h2>
-            <p className={styles.descricao}>Esta seção apresenta o conjunto de tecnologias que domino e aplico no dia a dia para superar desafios 
-                e entregar resultados que atendem às necessidades de cada cliente.
-            </p>
+        {/* Abas de Filtro */}
+        <div className={styles.filterTabs} role="tablist" aria-label="Filtro de competências">
+          {CATEGORIES.map((cat) => {
+            const count =
+              cat.id === 'all'
+                ? TECH_PILLARS.reduce((acc, p) => acc + p.items.length, 0)
+                : TECH_PILLARS.find((p) => p.id === cat.id)?.items.length || 0;
+            const isActive = activeCategory === cat.id;
 
-            <div className={styles.grids}>
-                {/* HTML5 */}
-               <div className={styles.grids_cards}>
-                    <img src={HTML5} alt="HMTL5" className={styles.img_tech} />
-                    <p>HTML</p>
-               </div>
-                {/* CSS */}
-               <div className={styles.grids_cards}>
-                    <img src={CSS3} alt="CSS" className={styles.img_tech} />
-                    <p>CSS</p>
-               </div>
-                {/* JS */}
-               <div className={styles.grids_cards}>
-                    <img src={JS} alt="JS" className={styles.img_tech} />
-                    <p>JavaScript</p>
-               </div>
-                {/* REACT */}
-               <div className={styles.grids_cards}>
-                    <img src={ReactIcon} alt="REACT" className={styles.img_tech} />
-                    <p>React</p>
-               </div>
-                {/* NODE */}
-               <div className={styles.grids_cards}>
-                    <img src={NodeJS} alt="NodeJS   " className={styles.img_tech} />
-                    <p>NodeJS</p>
-               </div>
-
-                {/* FIGMA */}
-               <div className={styles.grids_cards}>
-                    <img src={Figma} alt="Figma" className={styles.img_tech} />
-                    <p>Figma</p>
-               </div>
-                {/* BOOTSTRAP */}
-               <div className={styles.grids_cards}>
-                    <img src={Bootstrap} alt="Bootstrap" className={styles.img_tech} />
-                    <p>Bootstrap</p>
-               </div>
-                {/* JAVA */}
-               <div className={styles.grids_cards}>
-                    <img src={Java} alt="Java" className={styles.img_tech} />
-                    <p>Java</p>
-               </div>
-                {/* C# */}
-               <div className={styles.grids_cards}>
-                    <img src={Csharp} alt="Csharp" className={styles.img_tech} />
-                    <p>C#</p>
-               </div>
-                {/* APPSCRIPT */}
-               <div className={styles.grids_cards}>
-                    <img src={Appscript} alt="Appscript" className={styles.img_tech} />
-                    <p>Appscript</p>
-               </div>
-               
-                {/* FIREBIRD */}
-               <div className={styles.grids_cards}>
-                    <img src={Firebird} alt="Firebird" className={styles.img_tech} />
-                    <p>Firebird</p>
-               </div>
-                {/* MYSQL */}
-               <div className={styles.grids_cards}>
-                    <img src={MySQL} alt="MySQL" className={styles.img_tech} />
-                    <p>MySQL</p>
-               </div>
-                {/* ORACLE */}
-               <div className={styles.grids_cards}>
-                    <img src={Oracle} alt="Oracle" className={styles.img_tech} />
-                    <p>Oracle</p>
-               </div>
-                {/* POWER BI */}
-               <div className={styles.grids_cards}>
-                    <img src={PowerBI} alt="PowerBI" className={styles.img_tech} />
-                    <p>Power BI</p>
-               </div>
-                {/* GIT */}
-               <div className={styles.grids_cards}>
-                    <img src={Git} alt="GIT" className={styles.img_tech} />
-                    <p>GIT</p>
-               </div>
-                {/* GITHUB */}
-               <div className={styles.grids_cards}>
-                    <img src={GitHub} alt="GITHUB" className={styles.img_tech} />
-                    <p>GitHub</p>
-               </div>
-            </div>  
-
+            return (
+              <button
+                key={cat.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                className={`${styles.filterTab} ${isActive ? styles.filterTabActive : ''}`}
+                onClick={() => setActiveCategory(cat.id)}
+              >
+                <span>{cat.label}</span>
+                <span className={styles.counterBadge}>{count}</span>
+              </button>
+            );
+          })}
         </div>
+
+        {/* Pilares Arquiteturais */}
+        <div className={styles.pillarsContainer}>
+          {filteredPillars.map((pillar) => (
+            <article key={pillar.id} className={styles.pillarCard}>
+              <div className={styles.pillarHeader}>
+                <div className={styles.pillarTitleRow}>
+                  <div className={styles.pillarIconWrapper}>
+                    <i className={pillar.icon} aria-hidden="true"></i>
+                  </div>
+                  <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+                </div>
+                <p className={styles.pillarDescription}>{pillar.description}</p>
+              </div>
+
+              {/* Grid de Itens Técnicos */}
+              <div className={styles.techGrid}>
+                {pillar.items.map((tech) => (
+                  <div key={tech.name} className={styles.techItem}>
+                    <div className={styles.techIconBox}>
+                      {tech.type === 'image' ? (
+                        <img
+                          src={tech.icon}
+                          alt={`Ícone de ${tech.name}`}
+                          className={styles.techImg}
+                          loading="lazy"
+                        />
+                      ) : (
+                        <i className={`${tech.icon} ${styles.techFontIcon}`} aria-hidden="true"></i>
+                      )}
+                    </div>
+
+                    <div className={styles.techContent}>
+                      <span className={styles.techName} title={tech.name}>
+                        {tech.name}
+                      </span>
+                      <span className={styles.techTag} title={tech.tag}>
+                        {tech.tag}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default Ferramentas;

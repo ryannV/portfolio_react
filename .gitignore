@@ -10,6 +10,12 @@
 
 # production
 /build
+/dist
+.vite
+
+# agent & scripts (local dev tooling)
+/.agents
+/scripts
 
 # misc
 .DS_Store
