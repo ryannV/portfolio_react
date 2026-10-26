@@ -12,6 +12,7 @@ import Oracle from '../../assets/icons/database.svg';
 import PowerBI from '../../assets/icons/powerbi.svg';
 import ReactIcon from '../../assets/icons/react.svg';
 import NodeJS from '../../assets/icons/node.svg';
+import Python from '../../assets/icons/python.svg';
 import Figma from '../../assets/icons/figma.svg';
 import Bootstrap from '../../assets/icons/bootstrap.svg';
 import Csharp from '../../assets/icons/csharp.svg';
@@ -32,8 +33,8 @@ const TECH_PILLARS = [
     items: [
       { name: 'React', type: 'image', icon: ReactIcon, tag: 'Principal Stack' },
       { name: 'JavaScript', type: 'image', icon: JS, tag: 'Linguagem Core' },
-      { name: 'CSS Modules & Tokens', type: 'image', icon: CSS3, tag: 'Design System' },
-      { name: 'HTML5 Semântico', type: 'image', icon: HTML5, tag: 'SEO & Semântica' },
+      { name: 'CSS', type: 'image', icon: CSS3, tag: 'Design System' },
+      { name: 'HTML5', type: 'image', icon: HTML5, tag: 'SEO & Semântica' },
       { name: 'Vite & Mobile PWA', type: 'icon', icon: 'bi bi-lightning-charge-fill', tag: 'Build & PWA' },
       { name: 'Bootstrap', type: 'image', icon: Bootstrap, tag: 'Produtividade UI' },
       { name: 'Figma', type: 'image', icon: Figma, tag: 'Prototipagem UI' },
@@ -47,6 +48,7 @@ const TECH_PILLARS = [
       'Construção de serviços, regras de negócio seguras, rotinas de integração assíncronas e scripts corporativos.',
     items: [
       { name: 'Node.js', type: 'image', icon: NodeJS, tag: 'APIs & Microserviços' },
+      { name: 'Python', type: 'image', icon: Python, tag: 'Back-End & Scripts' },
       { name: 'REST APIs', type: 'icon', icon: 'bi bi-arrow-left-right', tag: 'Endpoints & JSON' },
       { name: 'Google Apps Script', type: 'image', icon: Appscript, tag: 'Automação Corporativa' },
       { name: 'Java', type: 'image', icon: Java, tag: 'Back-End & POO' },
@@ -58,12 +60,12 @@ const TECH_PILLARS = [
     title: 'Bancos de Dados & Analytics',
     icon: 'bi bi-database-fill-gear',
     description:
-      'Modelagem relacional, otimização de consultas SQL, auditoria contínua e modelagem de indicadores industriais.',
+      'Modelagem relacional, otimização de consultas SQL, auditoria contínua e modelagem de indicadores.',
     items: [
-      { name: 'Firebird SQL', type: 'image', icon: Firebird, tag: 'Em Produção (Digifarma)' },
+      { name: 'Firebird SQL', type: 'image', icon: Firebird, tag: 'SQL Corporativas' },
       { name: 'MySQL', type: 'image', icon: MySQL, tag: 'Bases Relacionais' },
-      { name: 'Oracle SQL', type: 'image', icon: Oracle, tag: 'Consultas Corporativas' },
-      { name: 'Power BI (DAX / M)', type: 'image', icon: PowerBI, tag: 'ETL & Gestão (Aperam)' },
+      { name: 'Oracle SQL', type: 'image', icon: Oracle, tag: 'SQL Corporativas' },
+      { name: 'Power BI (DAX / M)', type: 'image', icon: PowerBI, tag: 'Gestão de Dados' },
       { name: 'Supabase', type: 'image', icon: Supabase, tag: 'BaaS & PostgreSQL' },
     ],
   },
@@ -72,7 +74,7 @@ const TECH_PILLARS = [
     title: 'Engenharia, Qualidade & Tooling',
     icon: 'bi bi-terminal-split',
     description:
-      'Fluxos de versionamento em equipe, testes de endpoints, diagnósticos avançados e pipeline de entrega.',
+      'Fluxos de versionamento em equipe, testes de endpoints e diagnósticos avançados.',
     items: [
       { name: 'Git', type: 'image', icon: Git, tag: 'Controle de Versão' },
       { name: 'GitHub', type: 'image', icon: GitHub, tag: 'Deploy & CI/CD' },

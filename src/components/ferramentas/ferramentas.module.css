@@ -6,6 +6,8 @@
   transition: background-color var(--transition-normal);
   position: relative;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
 }
 
 .header {
@@ -311,6 +313,14 @@
     padding-bottom: 8px;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+
+  .filterTabs::-webkit-scrollbar {
+    display: none;
   }
 
   .filterTab {

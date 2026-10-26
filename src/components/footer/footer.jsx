@@ -19,30 +19,27 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil do Instagram"
+                className={styles.socialLink}
               >
-                <button type="button">
-                  <i className="bi bi-instagram"></i>
-                </button>
+                <i className="bi bi-instagram"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/ryann-victor-939b97240/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil do LinkedIn"
+                className={styles.socialLink}
               >
-                <button type="button">
-                  <i className="bi bi-linkedin"></i>
-                </button>
+                <i className="bi bi-linkedin"></i>
               </a>
               <a
                 href="https://github.com/ryannV"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil do GitHub"
+                className={styles.socialLink}
               >
-                <button type="button">
-                  <i className="bi bi-github"></i>
-                </button>
+                <i className="bi bi-github"></i>
               </a>
             </div>
           </div>

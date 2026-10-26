@@ -135,7 +135,6 @@
   font-size: 0.95rem;
   border-radius: var(--radius-full);
   text-decoration: none;
-  border: 1px solid var(--border-subtle);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -219,6 +218,7 @@
   .btnPrimary,
   .btnSecondary {
     width: 100%;
+    min-height: 48px;
     justify-content: center;
   }
 

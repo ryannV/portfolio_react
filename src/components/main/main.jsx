@@ -120,40 +120,36 @@ const Main = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Perfil do LinkedIn"
+              className={styles.socialLink}
             >
-              <button type="button">
-                <i className="bi bi-linkedin"></i>
-              </button>
+              <i className="bi bi-linkedin"></i>
             </a>
             <a
               href="https://github.com/ryannV"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Perfil do GitHub"
+              className={styles.socialLink}
             >
-              <button type="button">
-                <i className="bi bi-github"></i>
-              </button>
+              <i className="bi bi-github"></i>
             </a>
             <a
               href="https://wa.me/5533999277685?text=Ol%C3%A1%21+Estou+aqui+pelo+seu+portf%C3%B3lio.+%F0%9F%9A%80"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contato direto pelo WhatsApp"
+              className={styles.socialLink}
             >
-              <button type="button">
-                <i className="bi bi-whatsapp"></i>
-              </button>
+              <i className="bi bi-whatsapp"></i>
             </a>
             <a
               href="https://www.instagram.com/ryannvicttor/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Perfil do Instagram"
+              className={styles.socialLink}
             >
-              <button type="button">
-                <i className="bi bi-instagram"></i>
-              </button>
+              <i className="bi bi-instagram"></i>
             </a>
           </div>
         </div>

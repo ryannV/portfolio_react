@@ -33,6 +33,7 @@
   --border-card: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(239, 35, 60, 0.45);
   --glass-bg: rgba(11, 14, 23, 0.82);
+  --glass-blur: blur(12px);
   --glass-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6);
 
   /* Status */
@@ -57,6 +58,25 @@
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: 150ms var(--ease-smooth);
   --transition-normal: 250ms var(--ease-smooth);
+
+  /* Espaçamento Escalar */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-section: clamp(48px, 8vw, 96px);
+
+  /* Tipografia Fluida */
+  --text-hero: clamp(2rem, 5vw + 1rem, 3.5rem);
+  --text-h1: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+  --text-h2: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
 }
 
 [data-theme='light'] {
@@ -91,6 +111,7 @@
   --border-card: rgba(15, 23, 42, 0.07);
   --border-hover: rgba(220, 38, 38, 0.5);
   --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-blur: blur(12px);
   --glass-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
 
   /* Status */

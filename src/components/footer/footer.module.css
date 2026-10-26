@@ -21,22 +21,27 @@
   align-items: center;
 }
 
+.socialLink,
 .btn_social button {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-card);
   color: var(--text-primary);
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
-  margin: 0 10px;
+  margin: 0 8px;
   transition: all 0.25s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
+.socialLink:hover,
 .btn_social button:hover {
   background-color: var(--red-primary);
   border-color: var(--red-primary);

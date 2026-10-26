@@ -10,7 +10,7 @@ const EXPERIENCIAS = [
     periodo: 'Abril 2024 - Presente',
     statusBadge: 'Atuação Atual',
     descricao:
-      'Atendimento especializado consultivo e técnico a clientes corporativos em sistemas desktop, com foco em estabilidade, otimização de bancos relacionais e conformidade fiscal. Paralelamente, desenvolvimento de aplicações web internas para ganho de escala operacional.',
+      'Atuo como Analista de Suporte, prestando atendimento técnico a clientes, realizando manutenção e otimização de bancos de dados e apoiando processos fiscais. Também desenvolvo ferramentas web internas com React e Node.js para centralizar informações e otimizar os processos da equipe de Suporte, aumentando a agilidade na consulta e no gerenciamento de dados.',
     metricas: [
       {
         icon: 'bi bi-lightning-charge-fill',
@@ -128,7 +128,7 @@ const FORMACAO = [
     periodo: 'Fevereiro 2019 - Dezembro 2021',
     statusBadge: 'Concluído',
     descricao:
-      'Conclusão da formação básica com base em ciências exatas, raciocínio lógico e resolução de problemas.',
+      'Conclusão da formação no ensino médio.',
     destaques: ['Formação Geral', 'Raciocínio Lógico', 'Comunicação'],
   },
 ];
@@ -249,254 +249,195 @@ const Sobre = () => {
     <>
       {diplomaOpen && <DiplomaModal url={diplomaUrl} onClose={closeDiploma} />}
       <section className={styles.sobre}>
-      <div className="interface">
-        {/* Sobre, Ryann Victor */}
-        <h2 className={styles.titulo}>
-          Sobre, <span>Ryann Victor.</span>
-        </h2>
-        <p className={styles.destaque}>
-          Finalizando graduação em <span>Engenharia de Software</span> pela Unileste • 21 anos
-        </p>
+        <div className="interface">
+          {/* Sobre, Ryann Victor */}
+          <h2 className={styles.titulo}>
+            Sobre, <span>Ryann Victor.</span>
+          </h2>
+          <p className={styles.destaque}>
+            Bacharel em <span>Engenharia de Software</span> pela Unileste • 22 anos
+          </p>
 
-        {/* Bio Card */}
-        <div className={styles.flex}>
-          <div className={styles.img_wrapper}>
-            <img className={styles.img_tag_sobre} src={Ryann} alt="Foto de perfil de Ryann Victor" />
-          </div>
-          <div className={styles.txt_sobre}>
-            <p className={styles.descricao}>
-              Desenvolvedor <span>FullStack</span> com experiência em <span>React e Node.js</span>,
-              graduando em <span>Engenharia de Software</span> pela Unileste (conclusão em 2025).
-              <br />
-              <br />
-              Atuo no desenvolvimento de aplicações web completas — do back-end ao front-end — e aplico
-              esse conhecimento em projetos reais, incluindo um{' '}
-              <span>sistema de gerenciamento de usuários FullStack</span> que desenvolvi de forma independente.
-              <br />
-              <br />
-              Profissionalmente, trabalho na <span>Digifarma</span> onde, além do suporte técnico, criei
-              páginas web internas com React e Node.js que reduziram o tempo de busca de informações da
-              equipe de Suporte. Anteriormente, na <span>Aperam South America</span>, desenvolvi dashboards
-              com <span>Power BI</span> e automações com <span>SQL Oracle e Google AppScript</span> que
-              otimizaram processos e contribuíram para a redução de custos da Logística Integrada.
-            </p>
-            <p className={styles.loc}>
-              <i className="bi bi-geo-alt-fill" style={{ marginRight: '8px', color: 'var(--red-primary)' }}></i>
-              Ipatinga, Minas Gerais, Brasil
-            </p>
-          </div>
-        </div>
-
-        {/* Hard Skills */}
-        <h2 className={styles.sub_title}>Hard Skills</h2>
-
-        <div className={styles.grid_skills}>
-          <div className={styles.grid_cards}>
-            <h4>&lt;/&gt; Front-End</h4>
-            <p>
-              <span>HTML5</span>
-              <span>CSS3 Modules</span>
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Vite</span>
-              <span>Bootstrap</span>
-            </p>
-          </div>
-
-          <div className={styles.grid_cards}>
-            <h4>&lt;/&gt; Back-End</h4>
-            <p>
-              <span>Node.js</span>
-              <span>REST APIs</span>
-              <span>Java</span>
-              <span>C#</span>
-              <span>Google Apps Script</span>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.grid_skills}>
-          <div className={styles.grid_cards}>
-            <h4>&lt;/&gt; DataBase &amp; Analytics</h4>
-            <p>
-              <span>Firebird</span>
-              <span>MySQL</span>
-              <span>Oracle SQL</span>
-              <span>Power BI (DAX / M)</span>
-              <span>DBeaver</span>
-            </p>
-          </div>
-
-          <div className={styles.grid_cards}>
-            <h4>&lt;/&gt; Ferramentas &amp; DevOps</h4>
-            <p>
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>Figma</span>
-              <span>PWA</span>
-              <span>Postman</span>
-              <span>Supabase</span>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.grid_skills}>
-          <div className={styles.grid_cards}>
-            <h4>🤖 Inteligência Artificial</h4>
-            <p>
-              <span>Engenharia de Prompt</span>
-              <span>Gemini</span>
-              <span>ChatGPT</span>
-              <span>Claude</span>
-              <span>Copilot</span>
-              <span>Cursor</span>
-              <span>Antigravity</span>
-            </p>
-          </div>
-
-          <div className={styles.grid_cards}>
-            <h4>⚡ Metodologias</h4>
-            <p>
-              <span>Scrum</span>
-              <span>Kanban</span>
-              <span>Integração Contínua</span>
-              <span>XP</span>
-            </p>
-          </div>
-        </div>
-
-        {/* Soft Skills */}
-        <h2 className={styles.sub_title}>Soft Skills</h2>
-
-        <div className={styles.grid_skills}>
-          <div className={styles.grid_cards}>
-            <h4>🤝 Comunicação &amp; Colaboração</h4>
-            <p>
-              <span>Trabalho em equipe</span>
-              <span>Comunicação clara</span>
-              <span>Empatia</span>
-              <span>Escuta ativa</span>
-            </p>
-          </div>
-
-          <div className={styles.grid_cards}>
-            <h4>🚀 Foco em Resultados</h4>
-            <p>
-              <span>Autonomia</span>
-              <span>Comprometimento</span>
-              <span>Gestão do tempo</span>
-              <span>Proatividade</span>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.grid_skills}>
-          <div className={styles.grid_cards}>
-            <h4>🧠 Pensamento Analítico</h4>
-            <p>
-              <span>Resolução de problemas</span>
-              <span>Raciocínio lógico</span>
-              <span>Aprendizado contínuo</span>
-              <span>Atenção a detalhes</span>
-            </p>
-          </div>
-
-          <div className={styles.grid_cards}>
-            <h4>💡 Engenharia &amp; Inovação</h4>
-            <p>
-              <span>Visão de produto</span>
-              <span>Flexibilidade</span>
-              <span>Resiliência</span>
-              <span>Orientação a dados</span>
-            </p>
-          </div>
-        </div>
-
-        {/* Linha do Tempo de Experiências */}
-        <h2 className={styles.sub_title}>Trajetória Profissional</h2>
-        <p className={styles.sub_desc}>
-          Histórico de atuações com resultados tangíveis em desenvolvimento, automação e gestão de dados.
-        </p>
-
-        <div className={styles.timelineContainer}>
-          <div className={styles.timelineTrack}></div>
-
-          {EXPERIENCIAS.map((exp) => (
-            <div key={exp.id} className={styles.timelineItem}>
-              <div className={styles.timelineNode} title={exp.periodo}>
-                <div className={styles.timelinePulse}></div>
-              </div>
-
-              <div className={styles.timelineCard}>
-                <div className={styles.cardHeader}>
-                  <div>
-                    <h3 className={styles.cardCargo}>{exp.cargo}</h3>
-                    <div className={styles.cardCompanyRow}>
-                      <span className={styles.cardEmpresa}>{exp.empresa}</span>
-                      <span className={styles.cardPeriodo}>
-                        <i className="bi bi-calendar4-week" style={{ marginRight: '6px' }}></i>
-                        {exp.periodo}
-                      </span>
-                    </div>
-                  </div>
-                  <span className={styles.statusBadge}>{exp.statusBadge}</span>
-                </div>
-
-                <p className={styles.timelineDescricao}>{exp.descricao}</p>
-
-                {/* Métricas e Resultados Chave */}
-                <div className={styles.metricsGrid}>
-                  {exp.metricas.map((m, idx) => (
-                    <div key={idx} className={styles.metricCard}>
-                      <div className={styles.metricHeader}>
-                        <i className={m.icon}></i>
-                        <span>{m.label}</span>
-                      </div>
-                      <span className={styles.metricValor}>{m.valor}</span>
-                      <p className={styles.metricDetalhe}>{m.detalhe}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Tags da Experiência */}
-                <div className={styles.tagsRow}>
-                  {exp.tags.map((tag) => (
-                    <span key={tag} className={styles.timelineTag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+          {/* Bio Card */}
+          <div className={styles.flex}>
+            <div className={styles.img_wrapper}>
+              <img className={styles.img_tag_sobre} src={Ryann} alt="Foto de perfil de Ryann Victor" />
             </div>
-          ))}
-        </div>
+            <div className={styles.txt_sobre}>
+              <p className={styles.descricao}>
+                Desenvolvedor <span>Full Stack</span> com foco em <span>React, Node.js e ecossistema TypeScript/JavaScript</span>, graduado em <span>Engenharia de Software</span> pela Unileste (conclusão em 2025).
+                <br />
+                <br />
+                Experiência prática na criação de aplicações completas, automação de rotinas e integração de dados corporativos (com atuação na <span>Digifarma</span> e <span>Aperam South America</span>), aliando código performático a interfaces focadas em usabilidade e resolução ágil de problemas.
+              </p>
+              <p className={styles.loc}>
+                <i className="bi bi-geo-alt-fill" style={{ marginRight: '8px', color: 'var(--red-primary)' }}></i>
+                Ipatinga, Minas Gerais, Brasil
+              </p>
+            </div>
+          </div>
 
-        {/* Linha do Tempo de Formação Acadêmica */}
-        <h2 className={styles.sub_title}>Formação Acadêmica</h2>
+          {/* Hard Skills */}
+          <h2 className={styles.sub_title}>Hard Skills</h2>
 
-        <div className={styles.timelineContainer}>
-          <div className={styles.timelineTrack}></div>
+          <div className={styles.grid_skills}>
+            <div className={styles.grid_cards}>
+              <h4>&lt;/&gt; Front-End</h4>
+              <p>
+                <span>HTML5</span>
+                <span>CSS3 Modules</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Vite</span>
+                <span>Bootstrap</span>
+              </p>
+            </div>
 
-          {FORMACAO.map((form) => (
-            <div key={form.id} className={styles.timelineItem}>
-              <div className={styles.timelineNode} title={form.periodo}>
-                <div className={styles.timelinePulse}></div>
-              </div>
+            <div className={styles.grid_cards}>
+              <h4>&lt;/&gt; Back-End</h4>
+              <p>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>REST APIs</span>
+                <span>Java</span>
+                <span>C#</span>
+                <span>Google Apps Script</span>
+              </p>
+            </div>
 
-              <div className={styles.timelineCard}>
-            <div className={styles.cardHeader}>
-                  <div>
-                    <h3 className={styles.cardCargo}>{form.curso}</h3>
-                    <div className={styles.cardCompanyRow}>
-                      <span className={styles.cardEmpresa}>{form.instituicao}</span>
-                      <span className={styles.cardPeriodo}>
-                        <i className="bi bi-mortarboard" style={{ marginRight: '6px' }}></i>
-                        {form.periodo}
-                      </span>
-                      <span className={styles.statusBadge}>{form.statusBadge}</span>
+            <div className={styles.grid_cards}>
+              <h4>&lt;/&gt; DataBase &amp; Analytics</h4>
+              <p>
+                <span>Firebird</span>
+                <span>MySQL</span>
+                <span>Oracle SQL</span>
+                <span>Power BI (DAX / M)</span>
+                <span>DBeaver</span>
+              </p>
+            </div>
+
+            <div className={styles.grid_cards}>
+              <h4>&lt;/&gt; Ferramentas &amp; DevOps</h4>
+              <p>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>Figma</span>
+                <span>PWA</span>
+                <span>Postman</span>
+                <span>Supabase</span>
+              </p>
+            </div>
+
+            <div className={styles.grid_cards}>
+              <h4>🤖 Inteligência Artificial</h4>
+              <p>
+                <span>Engenharia de Prompt</span>
+                <span>Gemini</span>
+                <span>ChatGPT</span>
+                <span>Claude</span>
+                <span>Copilot</span>
+                <span>Cursor</span>
+                <span>Antigravity</span>
+              </p>
+            </div>
+
+            <div className={styles.grid_cards}>
+              <h4>⚡ Metodologias &amp; Engenharia</h4>
+              <p>
+                <span>Scrum</span>
+                <span>Kanban</span>
+                <span>Integração Contínua</span>
+                <span>XP</span>
+                <span>Clean Code</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Linha do Tempo de Experiências */}
+          <h2 className={styles.sub_title}>Trajetória Profissional</h2>
+          <p className={styles.sub_desc}>
+            Histórico de atuações com resultados tangíveis em desenvolvimento, automação e gestão de dados.
+          </p>
+
+          <div className={styles.timelineContainer}>
+            <div className={styles.timelineTrack}></div>
+
+            {EXPERIENCIAS.map((exp) => (
+              <div key={exp.id} className={styles.timelineItem}>
+                <div className={styles.timelineNode} title={exp.periodo}>
+                  <div className={styles.timelinePulse}></div>
+                </div>
+
+                <div className={styles.timelineCard}>
+                  <div className={styles.cardHeader}>
+                    <div>
+                      <h3 className={styles.cardCargo}>{exp.cargo}</h3>
+                      <div className={styles.cardCompanyRow}>
+                        <span className={styles.cardEmpresa}>{exp.empresa}</span>
+                        <span className={styles.cardPeriodo}>
+                          <i className="bi bi-calendar4-week" style={{ marginRight: '6px' }}></i>
+                          {exp.periodo}
+                        </span>
+                      </div>
                     </div>
+                    <span className={styles.statusBadge}>{exp.statusBadge}</span>
                   </div>
-                  {/* <div className={styles.cardHeaderRight}>
+
+                  <p className={styles.timelineDescricao}>{exp.descricao}</p>
+
+                  {/* Métricas e Resultados Chave */}
+                  <div className={styles.metricsGrid}>
+                    {exp.metricas.map((m, idx) => (
+                      <div key={idx} className={styles.metricCard}>
+                        <div className={styles.metricHeader}>
+                          <i className={m.icon}></i>
+                          <span>{m.label}</span>
+                        </div>
+                        <span className={styles.metricValor}>{m.valor}</span>
+                        <p className={styles.metricDetalhe}>{m.detalhe}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tags da Experiência */}
+                  <div className={styles.tagsRow}>
+                    {exp.tags.map((tag) => (
+                      <span key={tag} className={styles.timelineTag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Linha do Tempo de Formação Acadêmica */}
+          <h2 className={styles.sub_title}>Formação Acadêmica</h2>
+
+          <div className={styles.timelineContainer}>
+            <div className={styles.timelineTrack}></div>
+
+            {FORMACAO.map((form) => (
+              <div key={form.id} className={styles.timelineItem}>
+                <div className={styles.timelineNode} title={form.periodo}>
+                  <div className={styles.timelinePulse}></div>
+                </div>
+
+                <div className={styles.timelineCard}>
+                  <div className={styles.cardHeader}>
+                    <div>
+                      <h3 className={styles.cardCargo}>{form.curso}</h3>
+                      <div className={styles.cardCompanyRow}>
+                        <span className={styles.cardEmpresa}>{form.instituicao}</span>
+                        <span className={styles.cardPeriodo}>
+                          <i className="bi bi-mortarboard" style={{ marginRight: '6px' }}></i>
+                          {form.periodo}
+                        </span>
+                        <span className={styles.statusBadge}>{form.statusBadge}</span>
+                      </div>
+                    </div>
+                    {/* <div className={styles.cardHeaderRight}>
                     {form.diploma && (
                       <button
                         type="button"
@@ -509,22 +450,22 @@ const Sobre = () => {
                       </button>
                     )}
                   </div> */}
-                </div>
+                  </div>
 
-                <p className={styles.timelineDescricao}>{form.descricao}</p>
+                  <p className={styles.timelineDescricao}>{form.descricao}</p>
 
-                <div className={styles.tagsRow}>
-                  {form.destaques.map((item) => (
-                    <span key={item} className={styles.timelineTag}>
-                      {item}
-                    </span>
-                  ))}
+                  <div className={styles.tagsRow}>
+                    {form.destaques.map((item) => (
+                      <span key={item} className={styles.timelineTag}>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       </section>
     </>
   );

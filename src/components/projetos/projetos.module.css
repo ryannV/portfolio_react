@@ -2,6 +2,8 @@
 .projetos {
   padding: 60px 0 80px 0;
   user-select: none;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
 }
 
 /* Header */
@@ -69,9 +71,9 @@
 }
 
 .filterTabActive {
-  background: var(--backgroundRV) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
+  background: var(--backgroundRV);
+  color: #ffffff;
+  border-color: transparent;
   box-shadow: 0 4px 16px rgba(239, 35, 60, 0.4);
 }
 
@@ -93,7 +95,7 @@
 /* Grid de Projetos */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
   gap: 32px;
   align-items: stretch;
   width: 100%;
@@ -363,7 +365,7 @@
 /* Responsividade */
 @media (max-width: 920px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
     gap: 24px;
   }
 

@@ -180,10 +180,9 @@
   font-family: var(--font-main);
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff !important;
-  background-color: var(--red-primary);
-  background: var(--backgroundRV) !important;
-  border: none !important;
+  color: #ffffff;
+  background: var(--backgroundRV);
+  border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(239, 35, 60, 0.38);
@@ -286,9 +285,12 @@
   margin-top: 24px;
 }
 
+.socialLink,
 .btn_social button {
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   border-radius: 50%;
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-card);
@@ -300,12 +302,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   appearance: none;
   -webkit-appearance: none;
 }
 
+.socialLink:hover,
 .btn_social button:hover {
   background-color: var(--red-primary);
   border-color: var(--red-primary);
@@ -402,15 +406,16 @@
   .actionsGroup {
     flex-direction: column;
     width: 100%;
-    max-width: 320px;
+    max-width: min(100%, 360px);
     margin: 0 auto;
-    gap: 10px;
+    gap: 12px;
   }
 
   .btnPrimary,
   .btnSecondary,
   .btnOutline {
     width: 100%;
+    min-height: 48px;
     justify-content: center;
     padding: 12px 18px;
     font-size: 0.95rem;
@@ -426,10 +431,13 @@
     font-size: 2.1rem;
   }
 
+  .socialLink,
   .btn_social button {
-    margin: 0 6px;
-    width: 42px;
-    height: 42px;
-    font-size: 17px;
+    margin: 0 4px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 18px;
   }
 }
