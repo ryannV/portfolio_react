@@ -122,8 +122,12 @@ const Ferramentas = () => {
   return (
     <section id="ferramentas" className={styles.ferramentas} aria-label="Stack Técnica e Ferramentas">
       <div className="interface">
-        {/* Cabeçalho da Seção */}
+        {/* Cabeçalho da Seção com Badge HUD */}
         <header className={styles.header}>
+          <div className={styles.sectionBadge}>
+            <span className={styles.badgePulse}></span>
+            <span>SISTEMAS &amp; ARQUITETURA DE STACK</span>
+          </div>
           <h2 className={styles.titulo}>
             Stack Técnica &amp; <span>Arquitetura</span>
           </h2>
@@ -158,16 +162,25 @@ const Ferramentas = () => {
           })}
         </div>
 
-        {/* Pilares Arquiteturais */}
+        {/* Pilares Arquiteturais com Spotlight Dinâmico */}
         <div className={styles.pillarsContainer}>
           {filteredPillars.map((pillar) => (
-            <article key={pillar.id} className={styles.pillarCard}>
+            <article
+              key={pillar.id}
+              className={styles.pillarCard}
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+              }}
+            >
               <div className={styles.pillarHeader}>
                 <div className={styles.pillarTitleRow}>
                   <div className={styles.pillarIconWrapper}>
                     <i className={pillar.icon} aria-hidden="true"></i>
                   </div>
                   <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+                  <span className={styles.pillarCountPill}>{pillar.items.length} Techs</span>
                 </div>
                 <p className={styles.pillarDescription}>{pillar.description}</p>
               </div>

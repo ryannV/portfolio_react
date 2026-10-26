@@ -250,6 +250,14 @@ const Sobre = () => {
       {diplomaOpen && <DiplomaModal url={diplomaUrl} onClose={closeDiploma} />}
       <section className={styles.sobre}>
         <div className="interface">
+          {/* Badge HUD da Seção */}
+          <div className={styles.badgeWrapper}>
+            <div className={styles.sectionBadge}>
+              <span className={styles.badgePulse}></span>
+              <span>BIOGRAFIA &amp; TRAJETÓRIA DE ENGENHARIA</span>
+            </div>
+          </div>
+
           {/* Sobre, Ryann Victor */}
           <h2 className={styles.titulo}>
             Sobre, <span>Ryann Victor.</span>

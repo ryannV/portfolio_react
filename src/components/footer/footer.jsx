@@ -7,28 +7,21 @@ const Footer = () => {
       <div className="interface">
         <div className={styles.line_footer}>
           <div className={styles.flex}>
-            <div>
+            <div className={styles.brandBox}>
               <NavLink to="/" className="logo">
                 &lt;RV/&gt;
               </NavLink>
+              <p className={styles.tagline}>Bacharel em Engenharia de Software • Full Stack Web &amp; PWA</p>
             </div>
 
             <div className={styles.btn_social}>
-              <a
-                href="https://www.instagram.com/ryannvicttor/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Perfil do Instagram"
-                className={styles.socialLink}
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
               <a
                 href="https://www.linkedin.com/in/ryann-victor-939b97240/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Perfil do LinkedIn"
                 className={styles.socialLink}
+                title="LinkedIn"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
@@ -38,11 +31,38 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Perfil do GitHub"
                 className={styles.socialLink}
+                title="GitHub"
               >
                 <i className="bi bi-github"></i>
               </a>
+              <a
+                href="https://www.instagram.com/ryannvicttor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Perfil do Instagram"
+                className={styles.socialLink}
+                title="Instagram"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
             </div>
           </div>
+        </div>
+
+        {/* Barra de Telemetria e Status */}
+        <div className={styles.telemetryBar}>
+          <div className={styles.statusIndicator}>
+            <span className={styles.beaconDot}></span>
+            <span className={styles.statusLabel}>STATUS OPERACIONAL:</span>
+            <span className={styles.statusValue}>DISPONÍVEL</span>
+          </div>
+          <span className={styles.telemetryDivider}>•</span>
+          <span className={styles.telemetryText}>Engenharia Full Stack &amp; Soluções BaaS</span>
+          <span className={styles.telemetryDivider}>•</span>
+          <span className={styles.telemetryLocation}>
+            <i className="bi bi-geo-alt-fill" style={{ color: 'var(--red-primary)', marginRight: '4px' }}></i>
+            Ipatinga, Minas Gerais, Brasil
+          </span>
         </div>
 
         <div className={styles.down_footer}>
@@ -64,7 +84,7 @@ const Footer = () => {
         </div>
 
         <h4 className={styles.copy}>
-          &copy; 2026 Todos os direitos reservados. <span>Feito por Ryann Victor Vieira Miranda</span>
+          &copy; 2026 Todos os direitos reservados. <span>Ryann Victor Vieira Miranda</span>
         </h4>
       </div>
     </footer>

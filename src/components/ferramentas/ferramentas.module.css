@@ -16,6 +16,44 @@
   margin: 0 auto 40px auto;
 }
 
+/* Badge HUD da Seção */
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(239, 35, 60, 0.08);
+  border: 1px solid rgba(239, 35, 60, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--red-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.badgePulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red-primary);
+  box-shadow: 0 0 10px var(--red-primary);
+  animation: beaconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes beaconPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
 .titulo {
   color: var(--text-primary);
   font-size: 2.3rem;
@@ -60,7 +98,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: transform 0.2s var(--ease-smooth), border-color 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   backdrop-filter: blur(8px);
 }
 
@@ -101,21 +139,44 @@
 }
 
 .pillarCard {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   padding: 32px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--glass-shadow);
-  transition: border-color var(--transition-normal);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), var(--glass-shadow);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
+/* Spotlight Dinâmico no Card de Pilar */
+.pillarCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    480px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(239, 35, 60, 0.09),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pillarCard:hover::before {
+  opacity: 1;
+}
+
 .pillarCard:hover {
   border-color: var(--border-hover);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 12px 32px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(239, 35, 60, 0.12);
 }
 
 /* Cabeçalho do Pilar */
@@ -126,6 +187,8 @@
   margin-bottom: 24px;
   gap: 8px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .pillarTitleRow {
@@ -158,6 +221,20 @@
   word-break: break-word;
 }
 
+.pillarCountPill {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--red-primary);
+  background: rgba(239, 35, 60, 0.08);
+  border: 1px solid rgba(239, 35, 60, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .pillarDescription {
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -186,7 +263,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  transition: transform 0.25s var(--ease-smooth), background 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
   cursor: default;
   min-width: 0; /* Essencial para flex não vazar do grid */
   overflow: hidden;
@@ -196,8 +273,8 @@
 .techItem:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translate3d(0, -3px, 0);
+  box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.4), 0 0 14px rgba(239, 35, 60, 0.14);
 }
 
 .techIconBox {
@@ -209,11 +286,11 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s var(--ease-smooth);
 }
 
 .techItem:hover .techIconBox {
-  transform: scale(1.08);
+  transform: scale(1.1) rotate(3deg);
 }
 
 .techImg {

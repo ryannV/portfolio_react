@@ -1,44 +1,59 @@
 .footer {
   padding: 60px 0 40px 0;
-  border-top: 1px solid var(--border-subtle);
   background-color: var(--bg-primary);
   transition: background-color var(--transition-normal);
+  position: relative;
 }
 
 .flex {
   justify-content: space-between;
   display: flex;
   align-items: center;
+  gap: 24px;
+}
+
+.brandBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+  margin: 0;
 }
 
 .line_footer {
-  padding: 20px 0;
-  border-bottom: 2px solid var(--border-subtle);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .btn_social {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .socialLink,
 .btn_social button {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  min-height: 48px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-card);
   color: var(--text-primary);
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
-  margin: 0 8px;
-  transition: all 0.25s ease;
+  transition: transform 0.25s var(--ease-smooth), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.25s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  backdrop-filter: blur(8px);
 }
 
 .socialLink:hover,
@@ -46,44 +61,95 @@
   background-color: var(--red-primary);
   border-color: var(--red-primary);
   color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 0 16px rgba(239, 35, 60, 0.4);
+  transform: translate3d(0, -3px, 0) scale(1.08);
+  box-shadow: 0 0 20px rgba(239, 35, 60, 0.45);
 }
 
-.copy {
+/* Barra de Telemetria e Status Operacional */
+.telemetryBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 20px;
+  margin: 28px 0 20px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.statusIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.beaconDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-online);
+  box-shadow: var(--status-online-glow);
+  animation: beaconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.statusLabel {
   color: var(--text-muted);
-  text-align: center;
-  margin-top: 24px;
-  font-weight: 400;
-  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
-.copy span {
+.statusValue {
+  color: var(--status-online);
+  font-weight: 700;
+}
+
+.telemetryDivider {
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.telemetryText {
   color: var(--text-secondary);
 }
 
+.telemetryLocation {
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+}
+
 .down_footer {
-  padding: 24px 0 10px 0;
+  padding: 18px 0 10px 0;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .down_footer p {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  margin: 0;
 }
 
 .down_footer p i {
   color: var(--red-primary);
-  font-size: 20px;
-  margin-right: 14px;
+  font-size: 18px;
+  margin-right: 10px;
 }
 
 .down_footer p a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  font-family: var(--font-mono);
   transition: color 0.2s ease;
 }
 
@@ -91,28 +157,54 @@
   color: var(--red-primary);
 }
 
-@media (max-width: 600px) {
+.copy {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.copy span {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
   .footer {
     padding: 40px 0 30px 0;
   }
 
   .flex {
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brandBox {
     align-items: center;
   }
 
-  .btn_social {
-    margin-top: 10px;
+  .telemetryBar {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  .telemetryDivider {
+    display: none;
   }
 
   .down_footer {
+    flex-direction: column;
+    gap: 14px;
     text-align: center;
-    align-items: center;
   }
 
   .copy {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     line-height: 1.5;
   }
 }

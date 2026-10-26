@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import styles from './projetos.module.css';
 import ResumoProjetos from './resumoProjetos/ResumoProjetos';
 
@@ -22,6 +23,9 @@ const PROJETOS_DATA = [
     title: 'DigiVPN',
     categories: ['corporate', 'fullstack'],
     badge: 'Corporativo • Rede & Automação',
+    statusTag: 'Em Produção',
+    statusType: 'statusProduction',
+    slug: 'internal.corp/digivpn',
     description:
       'Solução interna corporativa para centralização, auditoria e automação de solicitações de arquivos de VPN com disparo de e-mails.',
     tags: ['React', 'Node.js', 'Rede Interna', 'Automação', 'Email Service'],
@@ -35,6 +39,9 @@ const PROJETOS_DATA = [
     title: 'DigiFirebird',
     categories: ['corporate', 'fullstack'],
     badge: 'Corporativo • Dados & Serverless',
+    statusTag: 'Em Produção',
+    statusType: 'statusProduction',
+    slug: 'internal.corp/firebird-ops',
     description:
       'Painel de controle de versões do banco de dados Firebird integrado à API do Google Apps Script para suporte técnico.',
     tags: ['React', 'Google Apps Script', 'Firebird', 'Sheets API', 'Auditoria'],
@@ -48,6 +55,9 @@ const PROJETOS_DATA = [
     title: 'CRUD de Usuários',
     categories: ['fullstack'],
     badge: 'Full Stack • REST API',
+    statusTag: 'Full Stack Service',
+    statusType: 'statusFullstack',
+    slug: 'github.com/ryannV/crud_cadastro_usuario',
     description:
       'Sistema full stack para gestão cadastral com operações assíncronas, validações em tempo real e arquitetura desacoplada.',
     tags: ['React', 'Node.js', 'Express', 'REST API', 'CSS Modules'],
@@ -61,6 +71,9 @@ const PROJETOS_DATA = [
     title: 'MiniBlog',
     categories: ['fullstack', 'frontend'],
     badge: 'Full Stack • SPA & Cloud',
+    statusTag: 'Deploy Ativo',
+    statusType: 'statusActive',
+    slug: 'ryannv.github.io/mini_blog',
     description:
       'Plataforma interativa para criação e leitura de publicações, com autenticação Firebase, busca por tags e feed dinâmico.',
     tags: ['React 19', 'Firebase Auth', 'Firestore NoSQL', 'SPA', 'Router v7'],
@@ -74,6 +87,9 @@ const PROJETOS_DATA = [
     title: 'Landing Page Newsletter',
     categories: ['frontend'],
     badge: 'Frontend & UI Lab',
+    statusTag: 'Deploy Ativo',
+    statusType: 'statusActive',
+    slug: 'ryannv.github.io/landingPageNewsletter',
     description:
       'Página promocional de alta conversão estruturada com design responsivo, tipografia elegante e foco em captação de leads.',
     tags: ['HTML5 Semântico', 'CSS3 Moderno', 'JavaScript', 'Mobile-First', 'UI/UX'],
@@ -87,6 +103,9 @@ const PROJETOS_DATA = [
     title: 'Trailer Super Mario',
     categories: ['frontend'],
     badge: 'Frontend & Mídia Lab',
+    statusTag: 'Deploy Ativo',
+    statusType: 'statusActive',
+    slug: 'ryannv.github.io/trailer-super-mario',
     description:
       'Experiência web temática com reprodução de vídeo promocional, modal controlado por DOM e animações em CSS.',
     tags: ['JavaScript ES6+', 'HTML5 Video', 'CSS Animations', 'DOM API'],
@@ -112,7 +131,7 @@ const Projetos = () => {
     setResumoAtivo('');
   };
 
-  // Fechar modal ao pressionar ESC e travar scroll do body
+  // Fechar modal ao pressionar ESC e travar scroll do body/html
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') fecharResumo();
@@ -120,13 +139,21 @@ const Projetos = () => {
 
     if (showModal) {
       window.addEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'hidden';
-    }
+      const prevBodyOverflow = document.body.style.overflow;
+      const prevHtmlOverflow = document.documentElement.style.overflow;
+      const prevTouchAction = document.body.style.touchAction;
 
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+        document.body.style.overflow = prevBodyOverflow;
+        document.documentElement.style.overflow = prevHtmlOverflow;
+        document.body.style.touchAction = prevTouchAction;
+      };
+    }
   }, [showModal]);
 
   // Efeito Spotlight: atualiza variáveis CSS do cursor relativas ao card
@@ -148,6 +175,10 @@ const Projetos = () => {
     <section className={styles.projetos} aria-label="Projetos e Estudos de Caso">
       <div className="interface">
         <header className={styles.header}>
+          <div className={styles.sectionBadge}>
+            <span className={styles.badgePulse}></span>
+            <span>Vitrine de Engenharia &amp; Produtos</span>
+          </div>
           <h2 className={styles.titulo}>
             Projetos &amp; <span>Case Studies</span>
           </h2>
@@ -191,6 +222,23 @@ const Projetos = () => {
               onMouseMove={handleMouseMove}
               aria-label={`Projeto ${projeto.title}`}
             >
+              {/* Top Window Chrome Mockup */}
+              <div className={styles.windowChrome}>
+                <div className={styles.chromeDots}>
+                  <span className={`${styles.chromeDot} ${styles.dotRed}`}></span>
+                  <span className={`${styles.chromeDot} ${styles.dotYellow}`}></span>
+                  <span className={`${styles.chromeDot} ${styles.dotGreen}`}></span>
+                </div>
+                <div className={styles.chromeAddress}>
+                  <i className="bi bi-lock-fill"></i>
+                  <span>{projeto.slug}</span>
+                </div>
+                <div className={styles.chromeStatus}>
+                  <span className={`${styles.statusDot} ${styles[projeto.statusType]}`}></span>
+                  <span>{projeto.statusTag}</span>
+                </div>
+              </div>
+
               {/* Preview da Imagem com Scroll Suave no Hover */}
               <div className={styles.cardImageContainer}>
                 <div
@@ -262,30 +310,58 @@ const Projetos = () => {
         </div>
       </div>
 
-      {/* MODAL DE CASE STUDY & ARQUITETURA */}
-      {showModal && (
-        <div className={styles.modalFundo} onClick={fecharResumo}>
+      {/* MODAL DE CASE STUDY & ARQUITETURA VIA PORTAL */}
+      {showModal &&
+        createPortal(
           <div
-            className={styles.modalConteudo}
-            onClick={(e) => e.stopPropagation()}
+            className={styles.modalOverlay}
+            onClick={fecharResumo}
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-titulo"
           >
-            <button
-              className={styles.fechar}
-              onClick={fecharResumo}
-              aria-label="Fechar modal de case study"
+            <div
+              className={styles.modalDialog}
+              onClick={(e) => e.stopPropagation()}
             >
-              <i className="bi bi-x-lg" aria-hidden="true"></i>
-            </button>
-            <h3 id="modal-titulo" className={styles.modalTituloHeader}>
-              Estudo de Caso &amp; Arquitetura Técnica
-            </h3>
-            {resumoAtivo && <ResumoProjetos titulo={resumoAtivo} />}
-          </div>
-        </div>
-      )}
+              {/* Barra Superior com Título e Botão Fechar */}
+              <div className={styles.modalTopBar}>
+                <div className={styles.modalTopTitle}>
+                  <i className="bi bi-diagram-3-fill"></i>
+                  <span id="modal-titulo">Estudo de Caso &amp; Arquitetura</span>
+                </div>
+                <button
+                  type="button"
+                  className={styles.modalCloseBtnTop}
+                  onClick={fecharResumo}
+                  aria-label="Fechar estudo de caso"
+                >
+                  <i className="bi bi-x-lg"></i>
+                  <span>Fechar</span>
+                </button>
+              </div>
+
+              {/* Corpo com Scroll Interno Independente */}
+              <div className={styles.modalBodyScroll}>
+                {resumoAtivo && <ResumoProjetos titulo={resumoAtivo} />}
+              </div>
+
+              {/* Barra Inferior com Botão Fechar Adicional */}
+              <div className={styles.modalFooter}>
+                <button
+                  type="button"
+                  className={styles.modalCloseBtnBottom}
+                  onClick={fecharResumo}
+                  aria-label="Fechar estudo de caso"
+                >
+                  <i className="bi bi-x-circle-fill"></i>
+                  <span>Fechar Estudo de Caso</span>
+                </button>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </section>
   );
 };

@@ -35,13 +35,19 @@ function AppContent() {
           </Routes>
         </Suspense>
 
-        {/* O componente Ferramentas renderiza na home */}
-        {isHomePage && <Ferramentas />}
+        {/* O componente Ferramentas renderiza na home com divisor laser */}
+        {isHomePage && (
+          <>
+            <div className="laserDivider" aria-hidden="true" />
+            <Ferramentas />
+          </>
+        )}
 
         {/* Card CTA de Contratação - temporariamente desativado */}
         {/* {isMainRoute && <ContactCTA />} */}
       </main>
 
+      <div className="laserDivider" aria-hidden="true" />
       <Footer />
     </>
   );
