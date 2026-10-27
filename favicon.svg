@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente Oficial RV (Dark Mode / Default) -->
+    <linearGradient id="rvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#900010" />
+      <stop offset="30%" stop-color="#cf182e" />
+      <stop offset="65%" stop-color="#ef233c" />
+      <stop offset="100%" stop-color="#ff4d6d" />
+    </linearGradient>
+
+    <!-- Gradiente Oficial RV (Light Mode Tabs) -->
+    <linearGradient id="rvGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#800000" />
+      <stop offset="35%" stop-color="#b91c1c" />
+      <stop offset="70%" stop-color="#dc2626" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+
+    <style>
+      .rv-symbol {
+        fill: url(#rvGradient);
+      }
+      @media (prefers-color-scheme: light) {
+        .rv-symbol {
+          fill: url(#rvGradientLight);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Logo RV com fundo transparente -->
+  <path class="rv-symbol" d="M113.80 292.80L113.80 321.70L16.80 277.80L16.80 247.60L113.80 203.50L113.80 232.20L55.60 257.70Q51.40 259.60 46.70 260.90Q42.10 262.20 39.30 262.60Q42.10 263 46.70 264.20Q51.40 265.30 55.60 267.20L113.80 292.80M138.30 332L106.90 332L106.90 178L156.50 178Q172.90 178 184.90 183.70Q197 189.40 203.60 199.90Q210.30 210.50 210.30 224.80Q210.30 239.80 203 251.60Q195.70 263.40 183.20 268.70L212.40 332L178 332L153.10 273.80L138.30 273.80L138.30 332M138.30 205.40L138.30 246.30L156.50 246.30Q167 246.30 172.80 241.10Q178.60 235.80 178.60 226.30Q178.60 216.40 172.80 210.90Q167 205.40 156.50 205.40L138.30 205.40M285.60 332L245.50 332L207.30 178L240 178L261.30 275.20Q262.40 280.30 264 288.10Q265.50 295.90 266.40 301.40Q267.20 295.90 268.50 288.10Q269.80 280.30 270.80 275L291.50 178L323.40 178L285.60 332M336.40 355.20L303.70 355.20L376.50 156.90L409.20 156.90L336.40 355.20M496.20 277.60L399.10 321.70L399.10 293L457.30 267.40Q461.60 265.50 466.20 264.30Q470.80 263 473.60 262.60Q470.80 262.20 466.20 261Q461.60 259.80 457.30 257.90L399.10 232.40L399.10 203.50L496.20 247.40" />
+</svg>
