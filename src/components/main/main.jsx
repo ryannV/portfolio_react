@@ -1,26 +1,26 @@
 import { useState, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './main.module.css';
-import Ryann from '../../assets/images/eu_legendarios.jpeg';
+import Ryann from '../../assets/images/euRosto.webp';
 
 const CODE_SNIPPET = `// developer.profile.ts
-export const developer: FullStackEngineer = {
-  name: "Ryann Victor",
-  role: "Full Stack Developer",
-  education: "Engenharia de Software (Unileste)",
-  status: "Disponível para novas oportunidades ⚡",
-  coreStack: {
-    frontend: ["React 19", "JavaScript (ESM)", "CSS Modules", "Vite"],
-    backend: ["Node.js", "Python", "REST APIs", "C#"],
-    databases: ["PostgreSQL", "Supabase", "Firebird", "MySQL"],
-  },
-  principles: ["Código Limpo", "Alta Performance", "UX Orientada a Negócio"]
+  export const developer: FullStackEngineer = {
+    name: "Ryann Victor",
+    role: "Full Stack Developer",
+    education: "Engenharia de Software (Unileste)",
+    status: "Disponível para novas oportunidades ⚡",
+    coreStack: {
+      frontend: ["React", "TypeScript", "CSS Modules", "Vite"],
+      backend: ["Node.js", "Python", "REST APIs", Java],
+      databases: ["PostgreSQL", "Firebase", "Firebird", "MySQL"],
+    },
+    principles: ["Código Limpo", "Alta Performance", "UX Orientada a Negócio"]
 };`;
 
 const TERMINAL_LOGS = [
   { cmd: 'ryann --status', out: 'Online • Aberto a projetos e contratação' },
-  { cmd: 'ryann stack --primary', out: 'React 19, Node.js, Python, Supabase, SQL' },
-  { cmd: 'ryann build --target', out: '✔ Web & Mobile PWA prontos para produção (0 erros)' },
+  { cmd: 'ryann stack --primary', out: 'React, Node.js, Python, TypeScript, SQL' },
+  { cmd: 'ryann build --target', out: 'Construções Web (0 erros)' },
 ];
 
 const Main = () => {
@@ -30,8 +30,8 @@ const Main = () => {
 
   const downloadCurriculo = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1SKeTpXmwdRovHNqBdhSKa5MIV-z8EuIV';
-    link.download = 'Curriculo Ryann Victor.pdf';
+    link.href = 'https://drive.google.com/file/d/1Po-FjQz1M6fF2thBRb_mCR-bD6d7f2kg/view?usp=sharing';
+    link.download = 'Ryann Victor - CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './sobre.module.css';
-import Ryann from '../../assets/images/eu_legendarios.jpeg';
+import Ryann from '../../assets/images/euRosto.webp';
 
 const EXPERIENCIAS = [
   {
@@ -263,7 +263,7 @@ const Sobre = () => {
             Sobre, <span>Ryann Victor.</span>
           </h2>
           <p className={styles.destaque}>
-            Bacharel em <span>Engenharia de Software</span> pela Unileste • 22 anos
+            Bacharel em <span>Engenharia de Software</span> pela Unileste • {new Date().getFullYear() - 2004} anos
           </p>
 
           {/* Bio Card */}

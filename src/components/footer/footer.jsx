@@ -57,7 +57,7 @@ const Footer = () => {
             <span className={styles.statusValue}>DISPONÍVEL</span>
           </div>
           <span className={styles.telemetryDivider}>•</span>
-          <span className={styles.telemetryText}>Engenharia Full Stack &amp; Soluções BaaS</span>
+          <span className={styles.telemetryText}>Engenharia Full Stack</span>
           <span className={styles.telemetryDivider}>•</span>
           <span className={styles.telemetryLocation}>
             <i className="bi bi-geo-alt-fill" style={{ color: 'var(--red-primary)', marginRight: '4px' }}></i>
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <h4 className={styles.copy}>
-          &copy; 2026 Todos os direitos reservados. <span>Ryann Victor Vieira Miranda</span>
+          &copy; {new Date().getFullYear()} Todos os direitos reservados. <span>Ryann Victor Vieira Miranda</span>
         </h4>
       </div>
     </footer>

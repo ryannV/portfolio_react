@@ -114,14 +114,14 @@
   height: 240px;
   border-radius: 28px;
   object-fit: cover;
-  object-position: center 8%;
+  object-position: center 35%;
   display: block;
   background-image: var(--backgroundRV);
   padding: 3px;
   box-sizing: border-box;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-  transform: scale(1.1);
-  transform-origin: center 12%;
+  transform: scale(1.02);
+  transform-origin: center center;
   clip-path: inset(0 0 0 0 round 28px);
 }
 
