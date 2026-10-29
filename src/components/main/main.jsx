@@ -11,7 +11,7 @@ const CODE_SNIPPET = `// developer.profile.ts
     status: "Disponível para novas oportunidades ⚡",
     coreStack: {
       frontend: ["React", "TypeScript", "CSS Modules", "Vite"],
-      backend: ["Node.js", "Python", "REST APIs", Java],
+      backend: ["Node.js", "Python", "REST APIs", "Java"],
       databases: ["PostgreSQL", "Firebase", "Firebird", "MySQL"],
     },
     principles: ["Código Limpo", "Alta Performance", "UX Orientada a Negócio"]
@@ -272,24 +272,25 @@ const Main = () => {
                       <span className={styles.cString}>"Engenharia de Software (Unileste)"</span>,
                       {'\n  '}
                       <span className={styles.cKey}>status</span>:{' '}
-                      <span className={styles.cString}>"Disponível para novos desafios ⚡"</span>,
+                      <span className={styles.cString}>"Disponível para novas oportunidades ⚡"</span>,
                       {'\n  '}
                       <span className={styles.cKey}>coreStack</span>: {'{'}
                       {'\n    '}
                       <span className={styles.cKey}>frontend</span>: [
-                      <span className={styles.cString}>"React 19"</span>,{' '}
-                      <span className={styles.cString}>"JavaScript"</span>,{' '}
+                      <span className={styles.cString}>"React"</span>,{' '}
+                      <span className={styles.cString}>"TypeScript"</span>,{' '}
                       <span className={styles.cString}>"CSS Modules"</span>,{' '}
                       <span className={styles.cString}>"Vite"</span>],
                       {'\n    '}
                       <span className={styles.cKey}>backend</span>: [
                       <span className={styles.cString}>"Node.js"</span>,{' '}
                       <span className={styles.cString}>"Python"</span>,{' '}
-                      <span className={styles.cString}>"REST APIs"</span>],
+                      <span className={styles.cString}>"REST APIs"</span>,{' '}
+                      <span className={styles.cString}>"Java"</span>],
                       {'\n    '}
                       <span className={styles.cKey}>databases</span>: [
                       <span className={styles.cString}>"PostgreSQL"</span>,{' '}
-                      <span className={styles.cString}>"Supabase"</span>,{' '}
+                      <span className={styles.cString}>"Firebase"</span>,{' '}
                       <span className={styles.cString}>"Firebird"</span>,{' '}
                       <span className={styles.cString}>"MySQL"</span>],
                       {'\n  }'},
@@ -297,7 +298,7 @@ const Main = () => {
                       <span className={styles.cKey}>principles</span>: [
                       <span className={styles.cString}>"Código Limpo"</span>,{' '}
                       <span className={styles.cString}>"Alta Performance"</span>,{' '}
-                      <span className={styles.cString}>"UX Intuitiva"</span>]
+                      <span className={styles.cString}>"UX Orientada a Negócio"</span>]
                       {'\n}'};
                     </code>
                   </pre>

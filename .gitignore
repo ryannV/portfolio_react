@@ -24,6 +24,10 @@
 .env.test.local
 .env.production.local
 
+# private docs & raw certificates
+/docs_privados
+*.pdf
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

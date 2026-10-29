@@ -1,6 +1,6 @@
 import './App.css';
 import './styles/global.css';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import AppContent from './hooks/AppContent.jsx';
 
@@ -8,9 +8,9 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <HashRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <AppContent />
-        </HashRouter>
+        </BrowserRouter>
       </div>
     </ThemeProvider>
   );
